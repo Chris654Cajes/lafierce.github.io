@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Stories - La-Fierce</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #333333;
+        overflow-x: hidden;
+      }
+
+      /* Sidebar Styles */
+      #sidebar {
+        min-width: 280px;
+        max-width: 280px;
+        min-height: 100vh;
+        background-color: #161616;
+        border-right: 1px solid #dee2e6;
+        transition: all 0.3s;
+      }
+
+      .sidebar-header {
+        padding: 30px 20px;
+        text-align: center;
+        border-bottom: 1px solid #2d2d2d;
+      }
+
+      .sidebar-header img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 22px;
+        margin-bottom: 15px;
+        border: 2px solid #2d2d2d;
+        padding: 5px;
+        background-color: #0f0f0f;
+      }
+
+      .nav-link {
+        color: #a0a0a0;
+        padding: 15px 25px;
+        transition: 0.2s;
+        border-left: 4px solid transparent;
+        font-weight: 400;
+        text-decoration: none;
+        display: block;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: #fff;
+        background: #252525;
+        border-left: 4px solid #ff3700;
+      }
+
+      /* Main Content Area */
+      #content {
+        width: 100%;
+        padding: 50px;
+        background-color: #f8f9fa;
+        min-height: 100vh;
+      }
+
+      /* Alert Note Style */
+      .alert-custom {
+        background-color: #fff3cd;
+        border-left: 6px solid #ffc107;
+        color: #664d03;
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 45px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Accordion Styling */
+      .accordion-item {
+        border: 1px solid #e0e0e0;
+        border-radius: 18px !important;
+        margin-bottom: 25px;
+        overflow: hidden;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+      }
+
+      .accordion-button {
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 25px;
+        color: #ffffff;
+        background-color: #000000;
+        box-shadow: none !important;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #000000;
+        color: #ff3700;
+        border-bottom: 1px solid #222;
+      }
+
+      .accordion-button::after {
+        filter: brightness(0) invert(1);
+      }
+
+      .accordion-body {
+        padding: 40px;
+        line-height: 1.9;
+        background-color: #ffffff;
+      }
+
+      .highlight-text {
+        color: #ff3700;
+        font-weight: 600;
+      }
+
+      .section-tag {
+        font-weight: 700;
+        color: #161616;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-top: 25px;
+        display: block;
+        border-left: 4px solid #ff3700;
+        padding-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      .reminder-banner {
+        background-color: #161616;
+        color: #ffffff;
+        padding: 45px;
+        border-radius: 20px;
+        border-left: 15px solid #ff3700;
+        margin-top: 60px;
+      }
+
+      @media (max-width: 768px) {
+        .d-flex {
+          flex-direction: column;
+        }
+        #sidebar {
+          min-width: 100%;
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <img src="images/logo/La-Fierce.png" alt="La-Fierce Logo" />
+          <h4 class="text-white fw-bold">La-Fierce</h4>
+        </div>
+        <div class="nav flex-column mt-3">
+          <a class="nav-link active" onclick="showPage('intro')"
+            >Introduction</a
+          >
+          <a class="nav-link" onclick="showPage('purpose')">Purpose</a>
+          <a class="nav-link" href="success.html">Success Stories</a>
+          <a class="nav-link" onclick="showPage('software')"
+            >Software / Application</a
+          >
+          <a class="nav-link" onclick="showPage('download')">Download</a>
+        </div>
+      </nav>
+
+      <div id="sidebar-container"></div>
+
+      <div id="content">
+        <div class="container-fluid">
+          <h2 class="mb-4 section-heading">Success Stories from Real People</h2>
+
+          <p class="mt-5 mb-5">
+            These are just a few of the many inspiring stories from individuals
+            who have transformed many people's lives. Whether you're looking to
+            boost your confidence, improve your health, or simply find
+            motivation, these stories offer valuable insights and encouragement.
+          </p>
+
+          <div class="alert alert-custom d-flex align-items-start" role="alert">
+            <span class="me-3" style="font-size: 1.5rem">💡</span>
+            <div>
+              <strong>Note:</strong> I believe that there's a lot more
+              successful people but I cannot mention all of them. These specific
+              figures are selected because their rejections were public,
+              painful, and ultimately turned into fuel for greatness.
+            </div>
+          </div>
+
+          <div class="accordion" id="masterAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#jesus"
+                >
+                  Lord Jesus Christ
+                </button>
+              </h2>
+              <div
+                id="jesus"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Faced rejection from his own hometown of Nazareth where they
+                    attempted to kill him after his first sermon. He was
+                    betrayed by a close friend (Judas), denied by his most loyal
+                    supporter (Peter), and condemned by the religious and
+                    political elite of his time. He was mocked as a "King" while
+                    being executed as a common criminal.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He turned the ultimate rejection—death—into a
+                    <span class="highlight-text"
+                      >universal message of redemption</span
+                    >. By refusing to respond to hate with hate, he established
+                    a legacy of love that has governed Western civilization and
+                    influenced billions of lives for 2,000 years.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ignatius"
+                >
+                  St. Ignatius of Loyola
+                </button>
+              </h2>
+              <div
+                id="ignatius"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    A cannonball shattered his leg, ending his career as a
+                    vainglorious soldier. He was rejected by the life he thought
+                    he wanted. He underwent surgeries that were so brutal they
+                    left him with a permanent limp, destroying his chance at
+                    military "honor."
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He embraced humility. He went from a high-ranking knight to
+                    a
+                    <span class="highlight-text"
+                      >student sitting with children</span
+                    >
+                    at age 33 to learn Latin. He founded the Jesuits, creating a
+                    global network of some of the most prestigious schools and
+                    universities in existence today.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#jobs"
+                >
+                  Steve Jobs
+                </button>
+              </h2>
+              <div
+                id="jobs"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    In 1985, Jobs was publicly
+                    <span class="highlight-text">fired from Apple</span>, the
+                    very company he founded. The board saw him as uncontrollable
+                    and erratic. He was effectively a pariah in the industry he
+                    helped create.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He viewed the firing as a "liberation." He started NeXT and
+                    Pixar, redefining computer animation. When Apple was
+                    failing, they bought his company to get him back. He then
+                    led the most successful corporate turnaround in history,
+                    creating the iPhone and the modern digital era.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#gates"
+                >
+                  Bill Gates
+                </button>
+              </h2>
+              <div
+                id="gates"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Before Microsoft, Gates started "Traf-O-Data." It was a
+                    complete disaster. The product barely worked, and the
+                    business was a total failure. He was viewed as a college
+                    dropout with no future.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He used the technical lessons from that failure to build
+                    Microsoft. He realized that
+                    <span class="highlight-text">software, not hardware</span>,
+                    would rule the world. He became the richest man on Earth by
+                    refusing to let a failed first attempt define his
+                    intelligence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#sanders"
+                >
+                  Colonel Sanders
+                </button>
+              </h2>
+              <div
+                id="sanders"
+                class="accordion-collapse collapse"
+                data-bs-parent="#finalAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    At age 65, his restaurant failed. He was left with nothing
+                    but a $105 social security check and a chicken recipe. He
+                    was rejected
+                    <span class="highlight-text">1,009 times</span> while
+                    driving across the country trying to sell his franchise
+                    idea.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He never stopped knocking on doors. His persistence resulted
+                    in Kentucky Fried Chicken (KFC), proving that you are never
+                    too old to start a global empire if you have a "Fierce"
+                    resolve.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#zuck"
+                >
+                  Mark Zuckerberg
+                </button>
+              </h2>
+              <div
+                id="zuck"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Zuckerberg faced extreme legal rejection from his peers (the
+                    Winklevoss twins) and constant skepticism from the old guard
+                    of the internet who claimed social networking was a "passing
+                    fad" for college kids.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He focused on
+                    <span class="highlight-text">rapid scaling and data</span>.
+                    He didn't just build a site; he built an ecosystem
+                    (Facebook, Instagram, WhatsApp) that connected the entire
+                    planet, proving that youth and vision can disrupt any
+                    established industry.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#musk"
+                >
+                  Elon Musk
+                </button>
+              </h2>
+              <div
+                id="musk"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    In 2008, SpaceX suffered three consecutive launch failures.
+                    Musk was down to his last few million dollars; both Tesla
+                    and SpaceX were on the brink of bankruptcy. Critics and
+                    traditional aerospace engineers mocked him as a "amateur"
+                    who would lose everything.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He bet his entire personal fortune on the fourth launch. It
+                    was a success. He proved that
+                    <span class="highlight-text">unrelenting risk-taking</span>
+                    combined with engineering excellence can make the
+                    "impossible" (reusable rockets) a reality. Today, he is the
+                    leader of the private space and EV industries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#disney"
+                >
+                  Walt Disney
+                </button>
+              </h2>
+              <div
+                id="disney"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Fired from a newspaper for "lacking imagination." He went
+                    bankrupt several times. When he pitched Disneyland, he was
+                    rejected by
+                    <span class="highlight-text">302 banks</span> who thought
+                    the idea was foolish.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He built his own dream with his own hands. He refused to
+                    compromise on the quality of his animation and storytelling.
+                    He proved that "imagination" isn't something you're born
+                    with—it's something you fight for every day.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#rowling"
+                >
+                  J.K. Rowling
+                </button>
+              </h2>
+              <div
+                id="rowling"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    A divorced mother on welfare, Rowling was rejected by 12
+                    major publishers. She was told that children's books were a
+                    dead market and that her story was too long for kids to
+                    read.
+                  </p>
+                  <span class="section-tag">How She Got Successful</span>
+                  <p>
+                    She kept sending the manuscript until one small publisher
+                    gave her a chance. She became the first billionaire author,
+                    proving that
+                    <span class="highlight-text">one "Yes"</span> is more
+                    powerful than a hundred "No's."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#jackma"
+                >
+                  Jack Ma
+                </button>
+              </h2>
+              <div
+                id="jackma"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Jack Ma's life was defined by "No." He failed his college
+                    entrance exam three times. He applied for 30 different jobs
+                    and was rejected by every single one—including
+                    <span class="highlight-text"
+                      >KFC, where 24 people applied and 23 were hired</span
+                    >, leaving him as the only one rejected. He even applied to
+                    Harvard 10 times and was turned away every single time.
+                  </p>
+
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He embraced the rejection as training. He founded Alibaba in
+                    his small apartment with a group of friends, despite having
+                    no background in computing or coding. By focusing on helping
+                    small businesses survive the internet age, he built a global
+                    e-commerce empire. He famously said, "Being rejected makes
+                    you stronger."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#gaga"
+                >
+                  Lady Gaga
+                </button>
+              </h2>
+              <div
+                id="gaga"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Early in her career, Lady Gaga was signed to Island Def Jam
+                    Records, only to be
+                    <span class="highlight-text"
+                      >dropped by the label after just three months</span
+                    >. Executives didn't "get" her style or vision. Before she
+                    was famous, classmates even created a Facebook group called
+                    "Stefani Germanotta, you will never be famous," mocking her
+                    theatrical ambitions.
+                  </p>
+
+                  <span class="section-tag">How She Got Successful</span>
+                  <p>
+                    Instead of quitting, she played in the grittiest clubs in
+                    New York, honing her "Fierce" persona and songwriting. She
+                    refused to tone down her eccentricity. When she finally
+                    released "The Fame," she became a global phenomenon, winning
+                    multiple Grammys and an Oscar, proving that being "strange"
+                    is often the key to being irreplaceable.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#jordan"
+                >
+                  Michael Jordan
+                </button>
+              </h2>
+              <div
+                id="jordan"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    The greatest player in history was
+                    <span class="highlight-text"
+                      >cut from his high school varsity team</span
+                    >. He was told he was too short and didn't have the talent
+                    to play at that level. He went home and cried alone in his
+                    room.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He used that pain as fuel. He practiced longer and harder
+                    than anyone else to ensure he was never cut again. He
+                    eventually won 6 championships and redefined the game,
+                    proving that rejection is the best motivation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#bruce"
+                >
+                  Bruce Lee
+                </button>
+              </h2>
+              <div
+                id="bruce"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Bruce Lee was rejected by Hollywood for years because they
+                    believed a Chinese man could never lead a major American
+                    film. He was even rejected by the traditional martial arts
+                    community for wanting to teach Westerners his secrets.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He created his own style, Jeet Kune Do, and went back to
+                    Hong Kong to make movies that were so successful Hollywood
+                    was forced to come to him. He proved that
+                    <span class="highlight-text">being "water"</span>—adaptive
+                    and relentless—breaks any barrier.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ueshiba"
+                >
+                  Morihei Ueshiba (Aikido Founder)
+                </button>
+              </h2>
+              <div
+                id="ueshiba"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Ueshiba was a small, sickly child who was often bullied. As
+                    a young man, he sought out martial arts out of a sense of
+                    weakness and anger. He faced the rejection of his own
+                    physical limitations and the violent nature of the arts he
+                    was learning.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He transformed his "weakness" into a philosophy of
+                    <span class="highlight-text">Harmony</span>. He founded
+                    Aikido, a martial art that uses the opponent's energy
+                    against them without causing unnecessary harm. He proved
+                    that true strength is the ability to master oneself and
+                    promote peace.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mj"
+                >
+                  Michael Jackson
+                </button>
+              </h2>
+              <div
+                id="mj"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    MTV initially refused to play his videos because of his
+                    race. Critics claimed he was a "child star" who had reached
+                    his peak and would never be taken seriously as a solo
+                    artist. He faced immense scrutiny regarding his identity and
+                    appearance.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He created "Thriller"—the highest selling album of all time.
+                    He used high-budget short films to
+                    <span class="highlight-text">force the world to watch</span
+                    >. He became the "King of Pop" by being so undeniable that
+                    the barriers had no choice but to crumble.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ramsay"
+                >
+                  Gordon Ramsay
+                </button>
+              </h2>
+              <div
+                id="ramsay"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    His dream of being a pro soccer player was rejected when a
+                    career-ending injury happened at age 19. He was devastated
+                    and had no backup plan. Later, as a chef, he faced the
+                    rejection of a brutal, high-pressure industry that often
+                    breaks even the best.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He channeled his athletic discipline into the kitchen. He
+                    worked under the world's harshest mentors and eventually
+                    earned
+                    <span class="highlight-text">17 Michelin Stars</span>. He
+                    proved that when your first dream dies, your second dream
+                    can be even bigger if you have the "Fierce" spirit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#sunlife"
+                >
+                  Kevin Strain (Sun Life CEO)
+                </button>
+              </h2>
+              <div
+                id="sunlife"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Navigating the corporate ladder involves facing thousands of
+                    small rejections: being overlooked for projects, managing
+                    the fallout of financial crises, and leading through the
+                    skepticism of traditionalists during digital transformation.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He focused on
+                    <span class="highlight-text">empathetic leadership</span>
+                    and long-term vision. By prioritizing mental health and
+                    client-obsessed culture, he rose to lead a global giant,
+                    proving that steady growth and purpose are the keys to
+                    lasting corporate success.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#cena"
+                >
+                  John Cena & Damian Priest
+                </button>
+              </h2>
+              <div
+                id="cena"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Cena was nearly fired because his character was "boring."
+                    Priest spent 15 years in the indies being told he was "too
+                    old" for the big time. Both faced the rejection of being
+                    told they didn't "fit the mold."
+                  </p>
+                  <span class="section-tag">How They Got Successful</span>
+                  <p>
+                    They focused on
+                    <span class="highlight-text">relentless reinvention</span>.
+                    Cena developed the "Doctor of Thuganomics" to save his job;
+                    Priest stayed in peak condition until his late 30s. Both
+                    became World Champions by outlasting their critics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#rizal"
+                >
+                  Dr. Jose Rizal
+                </button>
+              </h2>
+              <div
+                id="rizal"
+                class="accordion-collapse collapse"
+                data-bs-parent="#finalAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Rizal faced the rejection of a colonial empire. His writings
+                    were banned, he was exiled to Dapitan to silence his
+                    influence, and he was eventually falsely accused of
+                    rebellion. He was a man without a country in the eyes of the
+                    ruling Spanish friars, facing constant threats to his life
+                    and the safety of his family.
+                  </p>
+                  <span class="section-tag">How He Got Successful</span>
+                  <p>
+                    He chose
+                    <span class="highlight-text">the pen over the sword</span>.
+                    By educating himself in multiple disciplines and writing
+                    "Noli Me Tángere" and "El Filibusterismo," he awakened the
+                    consciousness of an entire nation. His success wasn't
+                    measured in his survival, but in the eventual independence
+                    of the Philippines, sparked by his "Fierce" intellectual
+                    courage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reminder-banner">
+            <h4 class="fw-bold mb-3">Your Journey is Next</h4>
+            <p class="mb-0">
+              Rejection is not the end; it is the invitation to work harder.
+              <strong>Stay Fierce. Do Good. Win.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
