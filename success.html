@@ -152,6 +152,81 @@
           min-height: auto;
         }
       }
+
+      /* Target the button specifically to reduce the height */
+      .custom-small-accordion .accordion-button {
+        padding-top: 1rem; /* Default is 1rem */
+        padding-bottom: 1rem; /* Default is 1rem */
+        font-size: 0.9rem; /* Optional: slightly smaller text */
+      }
+
+      /* Adjust the icon (arrow) position if needed */
+      .custom-small-accordion .accordion-button::after {
+        background-size: 1rem; /* Makes the arrow a bit smaller to match */
+      }
+
+      /* 1. Smaller Accordion Header Styling */
+      .custom-small-accordion .accordion-button {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.95rem;
+      }
+
+      /* 2. Separated Pagination Styling */
+      #accordionPagination {
+        gap: 8px; /* This creates the physical separation between buttons */
+      }
+
+      #accordionPagination .page-item {
+        margin: 0; /* Ensuring no interference with gap */
+      }
+
+      #accordionPagination .page-link {
+        background-color: #161616;
+        color: #ff3700;
+        border: 1px solid #333;
+        border-radius: 4px !important; /* Forces rounded corners on all sides of every button */
+        transition: all 0.2s ease-in-out;
+        padding: 8px 16px;
+      }
+
+      /* 1. Smaller Accordion Header Styling */
+      .custom-small-accordion .accordion-button {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.95rem;
+      }
+
+      /* 2. Custom Pagination Styling */
+      #accordionPagination .page-link {
+        background-color: #292929;
+        color: #ff3700;
+        border: 1px solid #333; /* Dark border to match */
+        transition: all 0.2s ease-in-out;
+      }
+
+      /* Hover state */
+      #accordionPagination .page-link:hover {
+        background-color: #ff3700;
+        color: #292929;
+        border-color: #ff3700;
+      }
+
+      /* Active/Current Page state */
+      #accordionPagination .page-item.active .page-link {
+        background-color: #ff3700;
+        color: #292929;
+        border-color: #ff3700;
+        z-index: 3;
+      }
+
+      /* Focus state (remove blue glow) */
+      #accordionPagination .page-link:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 55, 0, 0.25);
+      }
+
+      /* Helper to hide inactive items */
+      .accordion-item.d-none {
+        display: none !important;
+      }
     </style>
   </head>
   <body>
@@ -188,12 +263,14 @@
             <div>
               <strong>Note:</strong> I believe that there's a lot more
               successful people but I cannot mention all of them. These specific
-              figures are selected because their rejections were public,
-              painful, and ultimately turned into fuel for greatness.
+              figures are selected because I have personally read about their
+              stories and I find them very inspiring. If you have any
+              suggestions for other successful people that I can add to this
+              list, I'm glad to hear them.
             </div>
           </div>
 
-          <div class="accordion" id="masterAccordion">
+          <div class="accordion custom-small-accordion" id="masterAccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
@@ -978,8 +1055,6 @@
               </div>
             </div>
 
-            <div class="accordion" id="masterAccordion">
-            
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
@@ -999,13 +1074,27 @@
                 <div class="accordion-body">
                   <span class="section-tag">Detailed Rejection</span>
                   <p>
-                    For years, Indila remained in the shadows of the French music industry. She faced the 
-                    <span class="highlight-text">rejection of invisibility</span>, working strictly as a songwriter for other artists while her own voice and unique "World" music style were overlooked by major labels. She was told her sound—a blend of French variety, Indian rhythms, and oriental scales—was too "complex" or "different" for the mainstream pop market.
+                    For years, Indila remained in the shadows of the French
+                    music industry. She faced the
+                    <span class="highlight-text">rejection of invisibility</span
+                    >, working strictly as a songwriter for other artists while
+                    her own voice and unique "World" music style were overlooked
+                    by major labels. She was told her sound—a blend of French
+                    variety, Indian rhythms, and oriental scales—was too
+                    "complex" or "different" for the mainstream pop market.
                   </p>
                   <span class="section-tag">How She Got Successful</span>
                   <p>
-                    She embraced her "difference" as her signature. By refusing to conform to standard pop formulas, she released "Dernière Danse," which became an unexpected global phenomenon. She proved that 
-                    <span class="highlight-text">authenticity transcends language</span>. Her success showed that staying "Fierce" in your creative vision can turn a niche sound into a universal language, eventually reaching billions of views and listeners worldwide.
+                    She embraced her "difference" as her signature. By refusing
+                    to conform to standard pop formulas, she released "Dernière
+                    Danse," which became an unexpected global phenomenon. She
+                    proved that
+                    <span class="highlight-text"
+                      >authenticity transcends language</span
+                    >. Her success showed that staying "Fierce" in your creative
+                    vision can turn a niche sound into a universal language,
+                    eventually reaching billions of views and listeners
+                    worldwide.
                   </p>
                 </div>
               </div>
@@ -1610,6 +1699,98 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
+                  data-bs-target="#rihanna"
+                >
+                  Rihanna
+                </button>
+              </h2>
+              <div
+                id="rihanna"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    After her initial success, critics dismissed Rihanna as a
+                    "one-hit wonder" who lacked vocal range and staying power.
+                    When she wanted to change her sound for her third album, her
+                    label was hesitant, fearing she would alienate her pop
+                    audience. She was
+                    <span class="highlight-text"
+                      >threatened with being dropped</span
+                    >
+                    if the new "edgy" direction didn't immediately pay off.
+                  </p>
+
+                  <span class="section-tag">How She Got Successful</span>
+                  <p>
+                    She took total creative control and released "Good Girl Gone
+                    Bad." The lead single "Umbrella" became a global phenomenon,
+                    staying at #1 for weeks. By ditching the "island girl" trope
+                    and embracing a darker, more sophisticated aesthetic, she
+                    transitioned from a pop singer to a
+                    <span class="highlight-text"
+                      >global fashion and beauty mogul</span
+                    >. She proved that sticking to your artistic vision, even
+                    when experts doubt you, is the key to longevity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#connelly"
+                >
+                  Jennifer Connelly
+                </button>
+              </h2>
+              <div
+                id="connelly"
+                class="accordion-collapse collapse"
+                data-bs-parent="#masterAccordion"
+              >
+                <div class="accordion-body">
+                  <span class="section-tag">Detailed Rejection</span>
+                  <p>
+                    Despite starting as a child actress, Jennifer Connelly's
+                    career hit a massive slump in her early twenties. She was
+                    often
+                    <span class="highlight-text"
+                      >typecast in "pretty girl" roles</span
+                    >
+                    that lacked substance. For years, she struggled to be taken
+                    seriously as a dramatic actress, and many in Hollywood felt
+                    her peak had already passed after her teen roles in the 80s.
+                  </p>
+
+                  <span class="section-tag">How She Got Successful</span>
+                  <p>
+                    She decided to step away and focus on smaller, challenging
+                    independent films to sharpen her craft. This persistence led
+                    to her breakout performance in "Requiem for a Dream," which
+                    shocked critics and displayed her raw talent. Shortly after,
+                    her role in "A Beautiful Mind" earned her an
+                    <span class="highlight-text"
+                      >Academy Award for Best Supporting Actress</span
+                    >. Her journey shows that patience and a commitment to "the
+                    work" over "the fame" can lead to a massive second act.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
                   data-bs-target="#atkinson"
                 >
                   Rowan Atkinson
@@ -1687,7 +1868,7 @@
                     charisma and urged him to bring that "Fierce" edge to the
                     ring. He took a massive risk by debuting the "Doctor of
                     Thuganomics" persona, which saved his career overnight. He
-                    used that momentum to become a 16-time World Champion and a
+                    used that momentum to become a 17-time World Champion and a
                     global film star, proving that when you are on the brink of
                     being "cut," the only way out is to reinvent yourself with
                     absolute boldness.
@@ -1785,6 +1966,13 @@
             </div>
           </div>
 
+          <nav aria-label="Accordion pagination" class="mt-4">
+            <ul
+              class="pagination justify-content-center"
+              id="accordionPagination"
+            ></ul>
+          </nav>
+
           <div class="reminder-banner">
             <h4 class="fw-bold mb-3">Your Journey is Next</h4>
             <p class="mb-0">
@@ -1795,6 +1983,66 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const itemsPerPage = 5;
+        const accordion = document.getElementById("masterAccordion");
+        const items = accordion.getElementsByClassName("accordion-item");
+        const paginationContainer = document.getElementById(
+          "accordionPagination",
+        );
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        function showPage(pageNumber) {
+          const start = (pageNumber - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+
+          // Hide all items and close any open ones
+          for (let i = 0; i < items.length; i++) {
+            items[i].classList.add("d-none");
+            // Optional: Close open items when switching pages
+            const collapseElement = items[i].querySelector(
+              ".accordion-collapse",
+            );
+            if (collapseElement.classList.contains("show")) {
+              collapseElement.classList.remove("show");
+              items[i]
+                .querySelector(".accordion-button")
+                .classList.add("collapsed");
+            }
+          }
+
+          // Show items for the current page
+          for (let i = start; i < end && i < items.length; i++) {
+            items[i].classList.remove("d-none");
+          }
+
+          // Update pagination buttons active state
+          updatePaginationButtons(pageNumber);
+        }
+
+        function updatePaginationButtons(activePage) {
+          paginationContainer.innerHTML = "";
+          for (let i = 1; i <= totalPages; i++) {
+            const li = document.createElement("li");
+            li.className = `page-item ${i === activePage ? "active" : ""}`;
+            li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+            li.addEventListener("click", (e) => {
+              e.preventDefault();
+              showPage(i);
+            });
+            paginationContainer.appendChild(li);
+          }
+        }
+
+        // Initialize the first page
+        if (totalPages > 0) {
+          showPage(1);
+        }
+      });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
