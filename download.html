@@ -8,10 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link 
-      rel="stylesheet" 
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    >
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -22,8 +22,8 @@
         background-color: #ffffff;
         color: #333333;
       }
-      
- /* Sidebar Styles */
+
+      /* Sidebar Styles */
       #sidebar {
         min-width: 280px;
         max-width: 280px;
@@ -78,7 +78,7 @@
         background: white;
         border-radius: 30px;
         border: none;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
         overflow: hidden;
       }
 
@@ -120,10 +120,23 @@
         transform: translateY(-3px);
       }
 
-      .store-btn i { font-size: 1.8rem; margin-right: 12px; }
-      .store-text { line-height: 1.2; text-align: left; }
-      .store-text small { font-size: 0.7rem; opacity: 0.8; }
-      .store-text span { font-size: 1.1rem; font-weight: 600; display: block; }
+      .store-btn i {
+        font-size: 1.8rem;
+        margin-right: 12px;
+      }
+      .store-text {
+        line-height: 1.2;
+        text-align: left;
+      }
+      .store-text small {
+        font-size: 0.7rem;
+        opacity: 0.8;
+      }
+      .store-text span {
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: block;
+      }
 
       .apk-btn {
         background: #ff3700;
@@ -144,10 +157,80 @@
       }
 
       @media (max-width: 768px) {
-        .d-flex { flex-direction: column; }
-        #sidebar { min-width: 100%; min-height: auto; }
-        .hero-gradient { padding: 40px 20px; }
+        .d-flex {
+          flex-direction: column;
+        }
+        #sidebar {
+          min-width: 100%;
+          min-height: auto;
+        }
+        .hero-gradient {
+          padding: 40px 20px;
+        }
       }
+
+      :root {
+            --primary-color: #6366f1; /* Modern Indigo */
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --text-dark: #1f2937;
+        }
+
+        .section-container {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* The Highlight Text Effect */
+        .highlight-text {
+            background: #ff3700;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        /* Subtle underline decoration */
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: #ff3700;
+            margin: 15px auto 0;
+            border-radius: 50px;
+        }
+
+        /* Subtext for better presentation */
+        .section-subtitle {
+            font-family: 'Inter', sans-serif;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 10px auto 0;
+            font-size: 1.1rem;
+        }
+
+        /* Entrance Animation */
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
   </head>
   <body>
@@ -171,8 +254,10 @@
           <div class="download-card">
             <div class="hero-gradient">
               <h1 class="display-4 fw-bold">Take Resilience With You</h1>
-              <p class="lead mb-4">The La-Fierce Mobile Experience is almost here.</p>
-              
+              <p class="lead mb-4">
+                The La-Fierce Mobile Experience is almost here.
+              </p>
+
               <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a href="downloads/la-fierce-android.apk" class="apk-btn">
                   <i class="bi bi-download me-2"></i> Download Direct APK (v1.0)
@@ -184,16 +269,26 @@
               <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
                   <h2 class="fw-bold mb-3">Coming Soon to Official Stores</h2>
-                  <p class="text-muted">We are currently in the final review process with Apple and Google. Soon, you'll be able to download La-Fierce directly from your favorite store.</p>
+                  <p class="text-muted">
+                    Our application is not fully ready for official app stores.
+                    Soon, you'll be able to download La-Fierce directly from
+                    your favorite store.
+                  </p>
                   <div class="d-flex flex-wrap gap-3 mt-4">
-                    <div class="store-btn opacity-50" style="cursor: not-allowed;">
+                    <div
+                      class="store-btn opacity-50"
+                      style="cursor: not-allowed"
+                    >
                       <i class="bi bi-google-play"></i>
                       <div class="store-text">
                         <small>Coming soon to</small>
                         <span>Google Play</span>
                       </div>
                     </div>
-                    <div class="store-btn opacity-50" style="cursor: not-allowed;">
+                    <div
+                      class="store-btn opacity-50"
+                      style="cursor: not-allowed"
+                    >
                       <i class="bi bi-apple"></i>
                       <div class="store-text">
                         <small>Coming soon to</small>
@@ -203,35 +298,137 @@
                   </div>
                 </div>
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                   <div class="p-5 bg-light rounded-circle d-inline-block border border-2 border-dashed">
-                      <i class="bi bi-phone text-danger" style="font-size: 5rem;"></i>
-                   </div>
+                  <div
+                    class="p-5 bg-light rounded-circle d-inline-block border border-2 border-dashed"
+                  >
+                    <i
+                      class="bi bi-phone text-danger"
+                      style="font-size: 5rem"
+                    ></i>
+                  </div>
                 </div>
               </div>
 
-              <hr class="my-5">
+              <hr class="my-5" />
 
               <h3 class="fw-bold mb-4 text-center">How to Install the APK</h3>
               <div class="row g-4">
                 <div class="col-md-3">
                   <div class="step-number">1</div>
                   <h6>Download</h6>
-                  <p class="small text-muted">Click the "Download Direct APK" button above to save the file to your device.</p>
+                  <p class="small text-muted">
+                    Click the "Download Direct APK" button above to save the
+                    file to your device.
+                  </p>
                 </div>
                 <div class="col-md-3">
                   <div class="step-number">2</div>
                   <h6>Allow Sources</h6>
-                  <p class="small text-muted">Go to Settings > Security and enable <b>"Install from Unknown Sources"</b>.</p>
+                  <p class="small text-muted">
+                    Go to Settings > Security and enable
+                    <b>"Install from Unknown Sources"</b>.
+                  </p>
                 </div>
                 <div class="col-md-3">
                   <div class="step-number">3</div>
                   <h6>Install</h6>
-                  <p class="small text-muted">Open the downloaded file and follow the on-screen prompts to install.</p>
+                  <p class="small text-muted">
+                    Open the downloaded file and follow the on-screen prompts to
+                    install.
+                  </p>
                 </div>
                 <div class="col-md-3">
                   <div class="step-number">4</div>
                   <h6>Be Fierce</h6>
-                  <p class="small text-muted">Open the app, sign in, and start tracking your resilience journey!</p>
+                  <p class="small text-muted">
+                    Open the app, sign in, and start tracking your resilience
+                    journey!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mt-5 mb-5">
+            <div class="col-lg-8">
+                <h3 class="section-title">
+                    Upcoming <span class="highlight-text">App Enhancements</span>
+                </h3>
+                
+                <div class="title-underline"></div>
+                
+                <p class="section-subtitle">
+                    We're constantly evolving. Explore the new features and performance 
+                    improvements coming to your dashboard next month.
+                </p>
+            </div>
+        </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card feature-card p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div class="icon-box">
+                    <i class="bi bi-bell-fill"></i>
+                  </div>
+                  <span class="badge badge-upcoming">Mobile</span>
+                </div>
+                <br />
+                <h4 class="fw-bold mb-3">Push Notifications</h4>
+                <p class="text-muted">
+                  Stay in the loop with real-time updates. Get instant alerts
+                  for likes, comments, and direct mentions right on your lock
+                  screen.
+                </p>
+                <hr class="my-4 opacity-25" />
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-check2-circle text-success me-2"></i>
+                  <small class="text-secondary">Low Latency Delivery</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card feature-card p-4">
+                <div class="d-flex inline justify-content-between align-items-start">
+                  <div class="icon-box">
+                    <i class="bi bi-envelope-paper-heart-fill"></i>
+                  </div>
+                  <span class="badge badge-upcoming">Security</span>
+                </div>
+                <br />
+                <h4 class="fw-bold mb-3">Action Receipts</h4>
+                <p class="text-muted">
+                  Enhanced security with email confirmations. Receive a summary
+                  every time a major action is performed on your
+                  account.
+                </p>
+                <hr class="my-4 opacity-25" />
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-shield-lock-fill highlight-text me-2"></i>
+                  <small class="text-secondary">2FA Integrated</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card feature-card p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div class="icon-box">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                  <span class="badge badge-upcoming">Analytics</span>
+                </div>
+                <br />
+                <h4 class="fw-bold mb-3">Activity Insights</h4>
+                <p class="text-muted">
+                  A weekly breakdown of your app usage and interactions sent
+                  directly to your inbox to help you track your progress.
+                </p>
+                <hr class="my-4 opacity-25" />
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+                  <small class="text-secondary">Personalized Content</small>
                 </div>
               </div>
             </div>
