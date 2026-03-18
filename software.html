@@ -24,6 +24,14 @@
     }
     .app-screenshot:hover { transform: translateY(-10px); }
 
+    /* Custom styling for the AI terminal screenshot to make it pop */
+    .ai-validation-img {
+      max-width: 400px;
+      border-radius: 15px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
     .step-number {
       background: var(--fierce-red); color: white; width: 40px; height: 40px;
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -98,18 +106,32 @@
           <div class="step-number">03</div>
           <h3 class="fw-bold">Cheer for Each Other</h3>
           <p class="text-muted fs-5">The <b>Men and Women of Inspiration</b> section allows you to send "Cheers" and faith-based support to those currently facing their own "Goliaths."</p>
-          <p class="text-muted fs-5">We have validations before sending comments — positive ones are allowed but negative ones are not.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 pb-5 border-bottom flex-md-row-reverse">
+        <div class="col-md-5 text-center">
+          <img src="images/screenshots/Screenshot_20260224_235325_La-Fierce.jpg" alt="Edit Profile" class="app-screenshot mb-4 mb-md-0">
+        </div>
+        <div class="col-md-7 pe-md-5 text-md-end">
+          <div class="step-number ms-md-auto">04</div>
+          <h3 class="fw-bold">Manage Your Identity</h3>
+          <p class="text-muted fs-5">Update your profile and security settings easily. Your username represents your brand of resilience—make it yours.</p>
         </div>
       </div>
 
       <div class="row align-items-center mb-5">
-        <div class="col-md-7 ps-md-5">
-          <div class="step-number">04</div>
-          <h3 class="fw-bold">Manage Your Identity</h3>
-          <p class="text-muted fs-5">Update your profile and security settings easily. Your username represents your brand of resilience—make it yours.</p>
+        <div class="col-md-6 text-center">
+          <img src="images/screenshots/624560347_889175837161156_6882570559519755427_n.png" alt="AI Comment Validation" class="ai-validation-img mb-4 mb-md-0 w-100">
         </div>
-        <div class="col-md-5 text-center">
-          <img src="images/screenshots/Screenshot_20260224_235325_La-Fierce.jpg" alt="Edit Profile" class="app-screenshot mb-4 mb-md-0">
+        <div class="col-md-6 ps-md-5">
+          <div class="step-number">05</div>
+          <h3 class="fw-bold">AI-Powered Kindness</h3>
+          <p class="text-muted fs-5">Our proprietary AI Sentiment Engine scans every comment in real-time. We ensure that your shares are met with support, not toxicity.</p>
+          <ul class="text-muted list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Allowed:</strong> Encouraging words like "Don't give up" or "You're amazing."</li>
+            <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i> <strong>Blocked:</strong> Negative phrases or "hopeless" sentiments are automatically filtered to protect our community's mental well-being.</li>
+          </ul>
         </div>
       </div>
 

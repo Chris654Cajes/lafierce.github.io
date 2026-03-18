@@ -12,6 +12,7 @@
     { href: 'purpose.html',  label: 'Purpose',              icon: 'bi-bullseye'   },
     { href: 'success.html',  label: 'Success Stories',      icon: 'bi-trophy'     },
     { href: 'software.html', label: 'Software / Application', icon: 'bi-phone'    },
+    { href: 'transparency.html', label: 'Transparency',     icon: 'bi-shield-check' },
     { href: 'download.html', label: 'Download',             icon: 'bi-download'   },
   ];
 
