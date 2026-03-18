@@ -24,7 +24,6 @@
     }
     .app-screenshot:hover { transform: translateY(-10px); }
 
-    /* Custom styling for the AI terminal screenshot to make it pop */
     .ai-validation-img {
       max-width: 400px;
       border-radius: 15px;
@@ -38,8 +37,13 @@
       font-weight: bold; margin-bottom: 20px;
     }
 
-    h1, h2, h3 { color: var(--text); }
-    p.text-muted { color: var(--text-muted) !important; }
+    /* FIX: Ensuring headings and muted text respect the theme variables */
+    h1, h2, h3, h4, h5, h6, strong { color: var(--text); }
+    .theme-muted { color: var(--text-muted) !important; }
+    
+    /* The validation list colors */
+    .status-allowed { color: #198754; font-weight: 600; }
+    .status-blocked { color: rgb(220 53 69); font-weight: 600; }
 
     .border-bottom { border-color: var(--card-border) !important; }
   </style>
@@ -54,7 +58,7 @@
       <div class="row mb-5 text-center">
         <div class="col-12">
           <h1 class="display-4 fw-bold mb-3">Experience <span class="text-gradient">La-Fierce</span></h1>
-          <p class="lead text-muted">Watch the movement in action and see how we redefine social impact.</p>
+          <p class="lead theme-muted">Watch the movement in action and see how we redefine social impact.</p>
         </div>
       </div>
 
@@ -73,7 +77,7 @@
 
       <div class="row mb-4 text-center">
         <h2 class="fw-bold">The User Journey</h2>
-        <p class="text-muted">A deep dive into the features shown in the screenshots.</p>
+        <p class="theme-muted">A deep dive into the features shown in the screenshots.</p>
       </div>
 
       <div class="row align-items-center mb-5 pb-5 border-bottom">
@@ -83,7 +87,7 @@
         <div class="col-md-7 ps-md-5">
           <div class="step-number">01</div>
           <h3 class="fw-bold">Secure Entry</h3>
-          <p class="text-muted fs-5">Start your journey with a clean, distraction-free welcome screen. We prioritize your privacy so you can focus on being authentic.</p>
+          <p class="theme-muted fs-5">Start your journey with a clean, distraction-free welcome screen. We prioritize your privacy so you can focus on being authentic.</p>
         </div>
       </div>
 
@@ -94,7 +98,7 @@
         <div class="col-md-7 pe-md-5 text-md-end">
           <div class="step-number ms-md-auto">02</div>
           <h3 class="fw-bold">The Resilience Feed</h3>
-          <p class="text-muted fs-5">Available in both Light and Dark modes. Share your "pivots" and "failures" to inspire others.</p>
+          <p class="theme-muted fs-5">Available in both Light and Dark modes. Share your "pivots" and "failures" to inspire others.</p>
         </div>
       </div>
 
@@ -105,7 +109,7 @@
         <div class="col-md-7 ps-md-5">
           <div class="step-number">03</div>
           <h3 class="fw-bold">Cheer for Each Other</h3>
-          <p class="text-muted fs-5">The <b>Men and Women of Inspiration</b> section allows you to send "Cheers" and faith-based support to those currently facing their own "Goliaths."</p>
+          <p class="theme-muted fs-5">The <b>Men and Women of Inspiration</b> section allows you to send "Cheers" and faith-based support to those currently facing their own "Goliaths."</p>
         </div>
       </div>
 
@@ -116,7 +120,7 @@
         <div class="col-md-7 pe-md-5 text-md-end">
           <div class="step-number ms-md-auto">04</div>
           <h3 class="fw-bold">Manage Your Identity</h3>
-          <p class="text-muted fs-5">Update your profile and security settings easily. Your username represents your brand of resilience—make it yours.</p>
+          <p class="theme-muted fs-5">Update your profile and security settings easily. Your username represents your brand of resilience—make it yours.</p>
         </div>
       </div>
 
@@ -127,10 +131,16 @@
         <div class="col-md-6 ps-md-5">
           <div class="step-number">05</div>
           <h3 class="fw-bold">AI-Powered Kindness</h3>
-          <p class="text-muted fs-5">Our proprietary AI Sentiment Engine scans every comment in real-time. We ensure that your shares are met with support, not toxicity.</p>
-          <ul class="text-muted list-unstyled">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Allowed:</strong> Encouraging words like "Don't give up" or "You're amazing."</li>
-            <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i> <strong>Blocked:</strong> Negative phrases or "hopeless" sentiments are automatically filtered to protect our community's mental well-being.</li>
+          <p class="theme-muted fs-5">Our proprietary AI Sentiment Engine scans every comment in real-time. We ensure that your shares are met with support, not toxicity.</p>
+          <ul class="theme-muted list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> 
+              <span class="status-allowed">Allowed:</span> Encouraging words like "Don't give up" or "You're amazing."
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-x-circle-fill text-danger me-2"></i> 
+              <span class="status-blocked">Blocked:</span> Negative phrases or "hopeless" sentiments are automatically filtered to protect our community's mental well-being.
+            </li>
           </ul>
         </div>
       </div>
