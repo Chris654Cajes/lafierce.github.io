@@ -62,7 +62,7 @@
 
   window.toggleTheme = function () {
     const cur = document.documentElement.getAttribute('data-theme') || 'light';
-    applyTheme(cur === 'dark' ? 'light' : 'dark');
+    applyTheme(cur === 'light' ? 'dark' : 'light');
   };
 
   // Restore saved theme; default light
