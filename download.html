@@ -67,6 +67,16 @@
     .feature-card .text-muted { color: var(--text-muted) !important; }
     .feature-card hr { border-color: var(--card-border); }
     .feature-card small { color: var(--text-muted); }
+
+    .live-badge {
+      background: rgba(25,135,84,0.12);
+      color: #198754;
+      border: 1px solid rgba(25,135,84,0.25);
+      border-radius: 50px;
+      padding: 3px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -78,7 +88,7 @@
       <div class="download-card">
         <div class="hero-gradient">
           <h1 class="display-4 fw-bold">Take Resilience With You</h1>
-          <p class="lead mb-4">The La-Fierce Mobile Experience is almost here.</p>
+          <p class="lead mb-4">The La-Fierce Mobile Experience — available now.</p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
             <a href="downloads/la-fierce-android.apk" class="apk-btn">
               <i class="bi bi-download me-2"></i> Download Direct APK (v1.0)
@@ -90,7 +100,7 @@
           <div class="row align-items-center mb-5">
             <div class="col-lg-6">
               <h2 class="fw-bold mb-3">Coming Soon to Official Stores</h2>
-              <p class="text-muted">Our application is not fully ready for official app stores. Soon, you'll be able to download La-Fierce directly from your favorite store.</p>
+              <p class="text-muted">Our application is not yet published on official app stores. Soon, you'll be able to download La-Fierce directly from your favorite store.</p>
               <div class="d-flex flex-wrap gap-3 mt-4">
                 <div class="store-btn opacity-50" style="cursor:not-allowed">
                   <i class="bi bi-google-play"></i>
@@ -116,39 +126,87 @@
             <div class="col-md-3"><div class="step-number">1</div><h6>Download</h6><p class="small text-muted">Click the "Download Direct APK" button above to save the file to your device.</p></div>
             <div class="col-md-3"><div class="step-number">2</div><h6>Allow Sources</h6><p class="small text-muted">Go to Settings &gt; Security and enable <b>"Install from Unknown Sources"</b>.</p></div>
             <div class="col-md-3"><div class="step-number">3</div><h6>Install</h6><p class="small text-muted">Open the downloaded file and follow the on-screen prompts to install.</p></div>
-            <div class="col-md-3"><div class="step-number">4</div><h6>Be Fierce</h6><p class="small text-muted">Open the app, sign in, and start tracking your resilience journey!</p></div>
+            <div class="col-md-3"><div class="step-number">4</div><h6>Be Fierce</h6><p class="small text-muted">Open the app, sign in, and start your resilience journey!</p></div>
           </div>
         </div>
       </div>
 
+      <!-- What's Live Now -->
       <div class="row justify-content-center mt-5 mb-4">
         <div class="col-lg-8 text-center">
-          <h3 class="fw-bold mb-3">Upcoming <span style="color:var(--fierce-red);">App Enhancements</span></h3>
-          <p class="text-muted">We're constantly evolving. Explore the new features and improvements coming soon.</p>
+          <h3 class="fw-bold mb-3">What's <span style="color:var(--fierce-red);">Live Right Now</span></h3>
+          <p class="text-muted">Every feature below is fully functional in the current version of the app.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch mb-4">
+        <div class="col-md-4 d-flex">
+          <div class="card feature-card p-4 w-100">
+            <div class="d-flex justify-content-between align-items-start">
+              <i class="bi bi-people-fill fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
+            </div>
+            <h4 class="fw-bold mt-4">Social Network</h4>
+            <p class="text-muted mt-3">Follow users, send friend requests, view follower/following lists, and tap any avatar anywhere in the app to visit that user's profile with their posts and shares.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-person-check-fill text-success me-2"></i>Follow · Friends · Profiles</small></div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card feature-card p-4 w-100">
+            <div class="d-flex justify-content-between align-items-start">
+              <i class="bi bi-envelope-fill fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
+            </div>
+            <h4 class="fw-bold mt-4">Direct Messaging</h4>
+            <p class="text-muted mt-3">Start private conversations with any user from their profile or from the Messages tab. Unread message counts appear as a live badge — separate from notifications.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-chat-dots-fill text-success me-2"></i>Real-time · Unread Badges</small></div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card feature-card p-4 w-100">
+            <div class="d-flex justify-content-between align-items-start">
+              <i class="bi bi-trophy-fill fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
+            </div>
+            <h4 class="fw-bold mt-4">Badges & Streaks</h4>
+            <p class="text-muted mt-3">Earn achievement badges and maintain daily posting streaks. Your resilience is quantified and displayed on your profile as living proof of your consistency.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-fire text-warning me-2"></i>Gamified Growth</small></div>
+          </div>
         </div>
       </div>
 
       <div class="row g-4 align-items-stretch">
-        <div class="col d-flex">
+        <div class="col-md-4 d-flex">
           <div class="card feature-card p-4 w-100">
             <div class="d-flex justify-content-between align-items-start">
-              <i class="bi bi-envelope-paper-heart-fill fs-3 text-danger"></i>
-              <span class="badge bg-secondary">Security</span>
+              <i class="bi bi-search fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
             </div>
-            <h4 class="fw-bold mt-4">Action Receipts</h4>
-            <p class="text-muted mt-3">Enhanced security with email confirmations. Receive a summary every time a major action is performed on your account.</p>
-            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-shield-lock-fill text-success me-2"></i>2FA Integrated</small></div>
+            <h4 class="fw-bold mt-4">Search & Discovery</h4>
+            <p class="text-muted mt-3">Find users, posts, and trending hashtags in real-time with debounced search. Follow users directly from results or tap to visit their full profile.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-hash text-success me-2"></i>Users · Posts · Hashtags</small></div>
           </div>
         </div>
-        <div class="col d-flex">
+        <div class="col-md-4 d-flex">
           <div class="card feature-card p-4 w-100">
             <div class="d-flex justify-content-between align-items-start">
-              <i class="bi bi-graph-up-arrow fs-3 text-danger"></i>
-              <span class="badge bg-secondary">Analytics</span>
+              <i class="bi bi-bookmark-heart-fill fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
             </div>
-            <h4 class="fw-bold mt-4">Activity Insights</h4>
-            <p class="text-muted mt-3">A weekly breakdown of your app usage and interactions sent directly to your inbox to help you track your progress.</p>
-            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-lightning-charge-fill text-warning me-2"></i>Personalized Content</small></div>
+            <h4 class="fw-bold mt-4">Bookmarks & Reactions</h4>
+            <p class="text-muted mt-3">Save inspiring posts with the bookmark button to revisit them anytime. React to posts with emoji reactions beyond a simple like.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-emoji-smile-fill text-warning me-2"></i>Save · React · Revisit</small></div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card feature-card p-4 w-100">
+            <div class="d-flex justify-content-between align-items-start">
+              <i class="bi bi-star-fill fs-3 text-danger"></i>
+              <span class="live-badge">✓ Live</span>
+            </div>
+            <h4 class="fw-bold mt-4">Nominations</h4>
+            <p class="text-muted mt-3">Nominate any La-Fierce member as a Success Story. Search their username with live suggestions, add your reason, and they receive an instant notification celebrating their recognition.</p>
+            <div class="mt-auto pt-4"><hr /><small><i class="bi bi-bell-fill text-success me-2"></i>Push Notified · Instant</small></div>
           </div>
         </div>
       </div>

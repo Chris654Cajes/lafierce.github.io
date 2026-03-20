@@ -37,15 +37,40 @@
       font-weight: bold; margin-bottom: 20px;
     }
 
-    /* FIX: Ensuring headings and muted text respect the theme variables */
     h1, h2, h3, h4, h5, h6, strong { color: var(--text); }
     .theme-muted { color: var(--text-muted) !important; }
-    
-    /* The validation list colors */
+
     .status-allowed { color: #198754; font-weight: 600; }
     .status-blocked { color: rgb(220 53 69); font-weight: 600; }
 
     .border-bottom { border-color: var(--card-border) !important; }
+
+    .feature-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,55,0,0.08); color: var(--fierce-red);
+      border: 1px solid rgba(255,55,0,0.2);
+      border-radius: 50px; padding: 4px 14px;
+      font-size: 0.78rem; font-weight: 600; margin: 3px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature-tile {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-tile:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(255,55,0,0.08); }
+    .feature-tile i { font-size: 1.6rem; color: var(--fierce-red); margin-bottom: 10px; }
+    .feature-tile h6 { font-weight: 700; margin-bottom: 6px; color: var(--text); }
+    .feature-tile p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
   </style>
 </head>
 <body>
@@ -75,9 +100,10 @@
         </div>
       </div>
 
+      <!-- ── User Journey ── -->
       <div class="row mb-4 text-center">
         <h2 class="fw-bold">The User Journey</h2>
-        <p class="theme-muted">A deep dive into the features shown in the screenshots.</p>
+        <p class="theme-muted">A deep dive into the core experience.</p>
       </div>
 
       <div class="row align-items-center mb-5 pb-5 border-bottom">
@@ -87,7 +113,7 @@
         <div class="col-md-7 ps-md-5">
           <div class="step-number">01</div>
           <h3 class="fw-bold">Secure Entry</h3>
-          <p class="theme-muted fs-5">Start your journey with a clean, distraction-free welcome screen. We prioritize your privacy so you can focus on being authentic.</p>
+          <p class="theme-muted fs-5">Start your journey with a clean, distraction-free welcome screen. Sign up with your username, email, and gender — or continue with Google. We prioritize your privacy so you can focus on being authentic.</p>
         </div>
       </div>
 
@@ -98,7 +124,7 @@
         <div class="col-md-7 pe-md-5 text-md-end">
           <div class="step-number ms-md-auto">02</div>
           <h3 class="fw-bold">The Resilience Feed</h3>
-          <p class="theme-muted fs-5">Available in both Light and Dark modes. Share your "pivots" and "failures" to inspire others.</p>
+          <p class="theme-muted fs-5">Available in both Light and Dark modes. Share your pivots and failures to inspire others. Like, comment, bookmark, react, and share posts — and tap any avatar to visit that person's profile.</p>
         </div>
       </div>
 
@@ -109,7 +135,7 @@
         <div class="col-md-7 ps-md-5">
           <div class="step-number">03</div>
           <h3 class="fw-bold">Cheer for Each Other</h3>
-          <p class="theme-muted fs-5">The <b>Men and Women of Inspiration</b> section allows you to send "Cheers" and faith-based support to those currently facing their own "Goliaths."</p>
+          <p class="theme-muted fs-5">The <b>Men and Women of Inspiration</b> section lets you send "Cheers" and faith-based support to those facing their own "Goliaths." Follow other users, send friend requests, and receive push notifications for every interaction.</p>
         </div>
       </div>
 
@@ -120,29 +146,108 @@
         <div class="col-md-7 pe-md-5 text-md-end">
           <div class="step-number ms-md-auto">04</div>
           <h3 class="fw-bold">Manage Your Identity</h3>
-          <p class="theme-muted fs-5">Update your profile and security settings easily. Your username represents your brand of resilience—make it yours.</p>
+          <p class="theme-muted fs-5">Update your profile picture, username, gender, and password easily. Your profile displays your Posts, Shares, follower count, and following count — all tappable to explore your network.</p>
         </div>
       </div>
 
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6 text-center">
+      <div class="row align-items-center mb-5 pb-5 border-bottom">
+        <div class="col-md-5 text-center">
           <img src="images/screenshots/624560347_889175837161156_6882570559519755427_n.png" alt="AI Comment Validation" class="ai-validation-img mb-4 mb-md-0 w-100">
         </div>
         <div class="col-md-6 ps-md-5">
           <div class="step-number">05</div>
           <h3 class="fw-bold">AI-Powered Kindness</h3>
-          <p class="theme-muted fs-5">Our proprietary AI Sentiment Engine scans every comment in real-time. We ensure that your shares are met with support, not toxicity.</p>
+          <p class="theme-muted fs-5">Our proprietary AI Sentiment Engine scans every comment in real-time to ensure your shares are met with support, not toxicity.</p>
           <ul class="theme-muted list-unstyled">
             <li class="mb-2">
-              <i class="bi bi-check-circle-fill text-success me-2"></i> 
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
               <span class="status-allowed">Allowed:</span> Encouraging words like "Don't give up" or "You're amazing."
             </li>
             <li class="mb-2">
-              <i class="bi bi-x-circle-fill text-danger me-2"></i> 
-              <span class="status-blocked">Blocked:</span> Negative phrases or "hopeless" sentiments are automatically filtered to protect our community's mental well-being.
+              <i class="bi bi-x-circle-fill text-danger me-2"></i>
+              <span class="status-blocked">Blocked:</span> Negative phrases or "hopeless" sentiments are automatically filtered.
             </li>
           </ul>
         </div>
+      </div>
+
+      <div class="row align-items-center mb-5 pb-5 border-bottom flex-md-row-reverse">
+        <div class="col-md-5 text-center">
+          <div class="p-5 text-center">
+            <i class="bi bi-envelope-paper-heart-fill" style="font-size:6rem;color:var(--fierce-red);"></i>
+          </div>
+        </div>
+        <div class="col-md-7 pe-md-5 text-md-end">
+          <div class="step-number ms-md-auto">06</div>
+          <h3 class="fw-bold">Direct Messaging</h3>
+          <p class="theme-muted fs-5">Message any La-Fierce member directly. Start a conversation from a user's profile or from the Messages tab. Unread message counts appear as a live badge on the tab — separate from your notification bell.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 pb-5 border-bottom">
+        <div class="col-md-5 text-center">
+          <div class="p-5 text-center">
+            <i class="bi bi-search" style="font-size:6rem;color:var(--fierce-red);"></i>
+          </div>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="step-number">07</div>
+          <h3 class="fw-bold">Search & Discovery</h3>
+          <p class="theme-muted fs-5">Find users, posts, and trending hashtags in real-time. Search results appear as you type with a 400ms debounce. Follow users directly from search results, or tap their avatar to visit their full profile.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 pb-5 border-bottom flex-md-row-reverse">
+        <div class="col-md-5 text-center">
+          <div class="p-5 text-center">
+            <i class="bi bi-trophy-fill" style="font-size:6rem;color:var(--fierce-red);"></i>
+          </div>
+        </div>
+        <div class="col-md-7 pe-md-5 text-md-end">
+          <div class="step-number ms-md-auto">08</div>
+          <h3 class="fw-bold">Badges & Streaks</h3>
+          <p class="theme-muted fs-5">Every time you post, your daily streak grows. Unlock badges for milestones like your first post, first follower, and more. Your streak and badge collection are displayed on your profile as living proof of your resilience.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="col-md-5 text-center">
+          <div class="p-5 text-center">
+            <i class="bi bi-star-fill" style="font-size:6rem;color:var(--fierce-red);"></i>
+          </div>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="step-number">09</div>
+          <h3 class="fw-bold">Nominate a Success Story</h3>
+          <p class="theme-muted fs-5">Know someone fierce enough to be a La-Fierce Success Story? Search their username and nominate them with a reason. They receive an in-app notification and a push alert celebrating their recognition.</p>
+        </div>
+      </div>
+
+      <!-- ── Full Feature Overview ── -->
+      <div class="row mt-5 mb-4 text-center">
+        <h2 class="fw-bold">Everything That's Live</h2>
+        <p class="theme-muted">Every feature currently available in the app.</p>
+      </div>
+
+      <div class="features-grid mb-5">
+        <div class="feature-tile"><i class="bi bi-file-post"></i><h6>Posts Feed</h6><p>Share your resilience story with the world</p></div>
+        <div class="feature-tile"><i class="bi bi-share"></i><h6>Shares</h6><p>Re-share posts with your own caption</p></div>
+        <div class="feature-tile"><i class="bi bi-chat-dots"></i><h6>Comments</h6><p>AI-filtered positive comments only</p></div>
+        <div class="feature-tile"><i class="bi bi-heart"></i><h6>Likes & Reactions</h6><p>Like posts and react with emojis</p></div>
+        <div class="feature-tile"><i class="bi bi-bookmark"></i><h6>Bookmarks</h6><p>Save inspiring posts to revisit later</p></div>
+        <div class="feature-tile"><i class="bi bi-person-plus"></i><h6>Follows</h6><p>Follow others and build your network</p></div>
+        <div class="feature-tile"><i class="bi bi-people"></i><h6>Friend Requests</h6><p>Send, accept, and manage friendships</p></div>
+        <div class="feature-tile"><i class="bi bi-envelope"></i><h6>Direct Messages</h6><p>Private 1-on-1 conversations</p></div>
+        <div class="feature-tile"><i class="bi bi-search"></i><h6>Search</h6><p>Find users, posts, and trending hashtags</p></div>
+        <div class="feature-tile"><i class="bi bi-bell"></i><h6>Notifications</h6><p>Real-time in-app and push notifications</p></div>
+        <div class="feature-tile"><i class="bi bi-trophy"></i><h6>Badges</h6><p>Earn badges for your achievements</p></div>
+        <div class="feature-tile"><i class="bi bi-fire"></i><h6>Streaks</h6><p>Track your daily posting consistency</p></div>
+        <div class="feature-tile"><i class="bi bi-star"></i><h6>Nominations</h6><p>Nominate someone as a Success Story</p></div>
+        <div class="feature-tile"><i class="bi bi-person-circle"></i><h6>User Profiles</h6><p>View any user's posts, shares, and stats</p></div>
+        <div class="feature-tile"><i class="bi bi-flag"></i><h6>Reports</h6><p>Report content to keep La-Fierce safe</p></div>
+        <div class="feature-tile"><i class="bi bi-chat-square-text"></i><h6>Feedback</h6><p>Send bugs and suggestions directly to us</p></div>
+        <div class="feature-tile"><i class="bi bi-arrow-repeat"></i><h6>App Updates</h6><p>See what's new and what's coming next</p></div>
+        <div class="feature-tile"><i class="bi bi-moon-stars"></i><h6>Dark Mode</h6><p>Full dark theme across every screen</p></div>
       </div>
 
     </div>
