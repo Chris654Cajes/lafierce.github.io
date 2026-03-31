@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La-Fierce — Be Fierce. Be Resilient.</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    #content { padding: 0; }
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(255,55,0,0.15) 0%, transparent 60%);
+      animation: breathe 6s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,55,0,0.1);
+      border: 1px solid rgba(255,55,0,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      color: var(--fierce-red);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero-title .gradient {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-fierce {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      box-shadow: 0 10px 30px rgba(255,55,0,0.3);
+    }
+
+    .btn-fierce:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255,55,0,0.4);
+      color: white;
+    }
+
+    .btn-outline-fierce {
+      background: transparent;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s;
+    }
+
+    .btn-outline-fierce:hover {
+      border-color: var(--fierce-red);
+      color: var(--fierce-red);
+      transform: translateY(-3px);
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone-mockup {
+      width: 300px;
+      height: 600px;
+      background: #111;
+      border-radius: 40px;
+      border: 8px solid #333;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 100px rgba(255,55,0,0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #1a1a2e 0%, #0c0c0c 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 30px;
+      background: #111;
+      border-radius: 0 0 20px 20px;
+      z-index: 10;
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 120px 60px;
+      background: var(--bg-primary);
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(255,55,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .feature-text h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-text p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      padding: 80px 60px;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 60px;
+      background: linear-gradient(135deg, var(--fierce-red) 0%, var(--fierce-orange) 100%);
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--fierce-red);
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      color: var(--fierce-red);
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px;
+      background: #0c0c0c;
+      color: rgba(255,255,255,0.6);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--fierce-red);
+    }
+
+    .footer-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .gradient {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @media (max-width: 991.98px) {
+      .hero-title { font-size: 2.5rem; }
+      .hero-section { flex-direction: column; text-align: center; }
+      .hero-content { padding: 40px 24px; }
+      .hero-cta { justify-content: center; }
+      .hero-visual { padding: 40px 24px; }
+      .features-section, .stats-section, .cta-section { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="lf-wrapper">
+  <aside id="sidebar"></aside>
+
+  <div id="content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <i class="bi bi-fire"></i>
+                Now with Gamification — Earn XP, Level Up, Compete
+              </div>
+              <h1 class="hero-title">
+                Be <span class="gradient">Fierce</span>.<br />Be <span class="gradient">Resilient</span>.
+              </h1>
+              <p class="hero-subtitle">
+                La-Fierce is the social network where your resilience becomes your superpower. Share your story, connect with others, and grow through every challenge.
+              </p>
+              <div class="hero-cta">
+                <a href="download.html" class="btn-fierce">
+                  <i class="bi bi-download me-2"></i>Download Now
+                </a>
+                <a href="how-it-works.html" class="btn-outline-fierce">
+                  <i class="bi bi-play-circle me-2"></i>See How It Works
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-visual">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div style="font-size: 4rem; margin-bottom: 20px;">🦁</div>
+                  <h3 style="color: white; font-weight: 700; margin-bottom: 8px;">La-Fierce</h3>
+                  <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Your resilience story starts here</p>
+                  <div style="margin-top: 40px; text-align: center;">
+                    <div style="color: var(--fierce-red); font-size: 2rem;">✨</div>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 12px;">Level 1 · Spark</p>
+                    <p style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">0 XP to next level</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 16px;">
+              A Community Built on <span class="text-gradient">Resilience</span>
+            </h2>
+            <p class="theme-muted" style="font-size: 1.1rem;">
+              La-Fierce is more than a social network — it's a movement of people who refuse to give up, who lift each other up, and who celebrate every pivot and every comeback.
+            </p>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="bi bi-heart-pulse"></i></div>
+              <div class="feature-text">
+                <h3>Share Your Story</h3>
+                <p>Post your pivots, failures, and comebacks. Your story might be exactly what someone else needs to hear.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+              <div class="feature-text">
+                <h3>AI-Powered Kindness</h3>
+                <p>Our AI filters out negativity. Every comment is scanned to ensure your space stays supportive and toxic-free.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="bi bi-trophy"></i></div>
+              <div class="feature-text">
+                <h3>Gamified Growth</h3>
+                <p>Earn XP, level up, join challenges, and climb weekly leaderboards. Your resilience is quantified and celebrated.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
+              <div class="feature-text">
+                <h3>Real Connections</h3>
+                <p>Follow, friend, message, and nominate. Build a network of people who genuinely care about your journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="stat-number">21</div>
+            <div class="stat-label">Live Features</div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Level Tiers</div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Possibilities</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Be Fierce?</h2>
+        <p>Join a community where resilience is rewarded, kindness is enforced, and your story matters.</p>
+        <a href="download.html" class="btn-white">
+          <i class="bi bi-download me-2"></i>Download La-Fierce Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="footer-brand">La-<span class="gradient">Fierce</span></div>
+            <p style="font-size: 0.9rem;">The social network where resilience becomes your superpower.</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Product</h6>
+            <ul style="list-style: none; padding: 0;">
+              <li class="mb-2"><a href="how-it-works.html">How It Works</a></li>
+              <li class="mb-2"><a href="download.html">Download</a></li>
+              <li class="mb-2"><a href="gamification.html">Gamification</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Trust</h6>
+            <ul style="list-style: none; padding: 0;">
+              <li class="mb-2"><a href="transparency.html">Data Transparency</a></li>
+              <li class="mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Stay Connected</h6>
+            <p style="font-size: 0.9rem;">Get updates about new features and community stories.</p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
+              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.1); margin: 40px 0;" />
+        <div class="text-center" style="font-size: 0.85rem;">
+          <p class="mb-0">&copy; 2024 La-Fierce. Built with resilience, for the resilient.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/disableElementStructureLook.js"></script>
+</body>
+</html>
