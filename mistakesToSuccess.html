@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistakes to Success - La-Fierce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    #content { padding: 40px 48px; }
+
+    /* Hero Section */
+    .mistakes-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-radius: 30px;
+      padding: 60px;
+      color: white;
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mistakes-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,55,0,0.15) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+
+    .mistakes-hero h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mistakes-hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Image Showcase */
+    .image-showcase {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .image-showcase:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .image-showcase img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .image-showcase h3 {
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .image-showcase p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Quote Card */
+    .quote-card {
+      background: linear-gradient(135deg, rgba(255,55,0,0.1) 0%, rgba(255,140,0,0.05) 100%);
+      border-left: 4px solid var(--fierce-red);
+      border-radius: 16px;
+      padding: 32px 40px;
+      margin-bottom: 40px;
+    }
+
+    .quote-card blockquote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .quote-card footer {
+      margin-top: 16px;
+      font-size: 1rem;
+      font-style: normal;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--text-muted);
+    }
+
+    /* Journey Steps */
+    .journey-step {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: all 0.3s;
+    }
+
+    .journey-step:hover {
+      border-color: var(--fierce-red);
+      box-shadow: 0 8px 24px rgba(255,55,0,0.1);
+      transform: translateX(4px);
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      border-color: var(--fierce-red);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h5 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    .cta-btn {
+      background: white;
+      color: var(--fierce-red);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 40px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      color: var(--fierce-red);
+    }
+
+    h1, h2, h3, h4, h5, h6 { color: var(--text); }
+    .theme-muted { color: var(--text-muted) !important; }
+  </style>
+</head>
+<body>
+<div class="lf-wrapper">
+  <aside id="sidebar"></aside>
+
+  <div id="content">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <div class="mistakes-hero">
+        <h1>🌟 From Mistakes to Success</h1>
+        <p>Every mistake is a stepping stone to greatness. Discover the journey of transformation and learn how setbacks can become your greatest comebacks.</p>
+      </div>
+
+      <!-- Image Showcase -->
+      <div class="image-showcase">
+        <img src="images/legendary/mistakeToSuccess.png" alt="Mistakes to Success Journey" />
+        <h3>The Journey of Transformation</h3>
+        <p class="theme-muted">A visual representation of how mistakes and failures can be transformed into success stories through perseverance, learning, and growth.</p>
+      </div>
+
+      <!-- The Journey Steps -->
+      <div class="section-title">
+        <h2>The Path from Mistakes to Success</h2>
+        <p class="theme-muted">Understanding the transformative journey that turns setbacks into comebacks.</p>
+      </div>
+
+      <div class="journey-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>🚧 Acknowledge the Mistake</h4>
+          <p>The first step to transformation is honest self-reflection. Recognize what went wrong without judgment or self-criticism. Every great success story begins with the courage to admit when we've fallen short.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>📚 Learn from the Experience</h4>
+          <p>Extract valuable lessons from every mistake. Ask yourself: What can this teach me? How can I grow from this? The wisdom gained from failure is often more valuable than the comfort of easy success.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>🔄 Adapt and Adjust</h4>
+          <p>Use your newfound knowledge to adjust your approach. Flexibility and adaptability are the hallmarks of resilient individuals who turn mistakes into stepping stones.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>💪 Take Action Again</h4>
+          <p>The bravest thing you can do is try again. Armed with lessons learned and a refined strategy, take decisive action. Each attempt brings you closer to your goals.</p>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h4>🏆 Celebrate the Success</h4>
+          <p>When you achieve success, remember the journey. Your mistakes weren't obstacles—they were essential parts of your path to greatness. Share your story to inspire others.</p>
+        </div>
+      </div>
+
+      <!-- Key Principles -->
+      <div class="section-title" style="margin-top: 80px;">
+        <h2>Key Principles of Transformation</h2>
+        <p class="theme-muted">The mindset shifts that turn failures into fuel for success.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h5>Growth Mindset</h5>
+            <p class="theme-muted">Believe that abilities can be developed through dedication and hard work. Every challenge is an opportunity to grow.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <h5>Self-Compassion</h5>
+            <p class="theme-muted">Treat yourself with the same kindness you'd show a friend. Mistakes don't define your worth as a person.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h5>Persistent Focus</h5>
+            <p class="theme-muted">Keep your eyes on your long-term goals. Short-term setbacks are just detours, not dead ends.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h5>Community Support</h5>
+            <p class="theme-muted">Lean on others for guidance and encouragement. We all need help sometimes, and that's perfectly okay.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h5>Continuous Improvement</h5>
+            <p class="theme-muted">Commit to getting 1% better every day. Small, consistent improvements compound into remarkable results.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h5>Vision & Purpose</h5>
+            <p class="theme-muted">Connect your daily actions to a larger purpose. When you know your 'why', you can endure any 'how'.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2>Start Your Transformation Today</h2>
+        <p>Your mistakes don't define you—your response to them does. Join the La-Fierce community and turn your setbacks into your greatest comebacks.</p>
+        <a href="download.html" class="cta-btn">Download La-Fierce App</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/disableElementStructureLook.js"></script>
+</body>
+</html>

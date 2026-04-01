@@ -300,6 +300,109 @@
       .hero-visual { padding: 40px 24px; }
       .features-section, .stats-section, .cta-section { padding: 60px 24px; }
     }
+
+    /* Modal Styles */
+    .modal-backdrop {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%);
+      border: 1px solid rgba(255, 55, 0, 0.2);
+      border-radius: 24px;
+      color: white;
+    }
+
+    .modal-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 24px 32px;
+    }
+
+    .modal-title {
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+
+    .modal-body {
+      padding: 32px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .modal-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px 32px;
+    }
+
+    .modal .btn-close {
+      filter: invert(1);
+    }
+
+    .how-it-works-video {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 55, 0, 0.2);
+    }
+
+    .how-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .how-step-number {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .how-step-content h5 {
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: white;
+    }
+
+    .how-step-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .modal-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 24px 0 16px;
+      color: var(--fierce-red);
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .feature-tag {
+      background: rgba(255, 55, 0, 0.1);
+      color: var(--fierce-red);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 55, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -327,9 +430,9 @@
                 <a href="download.html" class="btn-fierce">
                   <i class="bi bi-download me-2"></i>Download Now
                 </a>
-                <a href="how-it-works.html" class="btn-outline-fierce">
+                <button class="btn-outline-fierce" data-bs-toggle="modal" data-bs-target="#howItWorksModal">
                   <i class="bi bi-play-circle me-2"></i>See How It Works
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -431,6 +534,97 @@
       </div>
     </section>
 
+    <!-- How It Works Modal -->
+    <div class="modal fade" id="howItWorksModal" tabindex="-1" aria-labelledby="howItWorksModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="howItWorksModalLabel">
+              <i class="bi bi-trophy me-2" style="color: var(--fierce-red);"></i>Gamification System
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="theme-muted mb-4">Your resilience becomes your superpower. Earn XP, level up, and compete with the community.</p>
+
+            <!-- XP & Level System -->
+            <h4 class="modal-section-title"><i class="bi bi-lightning-charge me-2"></i>XP & Level System</h4>
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-star" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Earn XP for Every Action</h5>
+                <p>Posting, commenting, liking, sharing, and even daily logins earn you XP. Every interaction counts toward your growth.</p>
+              </div>
+            </div>
+
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-arrow-up-circle" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Level Up Through 100+ Tiers</h5>
+                <p>Accumulate XP to level up and unlock new status levels, from <strong>Spark</strong> to <strong>Blaze</strong> and beyond. Watch your progress in real-time with celebratory level-up notifications.</p>
+              </div>
+            </div>
+
+            <!-- Badges & Streaks -->
+            <h4 class="modal-section-title"><i class="bi bi-award me-2"></i>Badges & Streaks</h4>
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-fire" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Daily Streaks</h5>
+                <p>Every time you post, your daily streak grows. Maintain your streak to earn bonus XP and show your commitment to the community.</p>
+              </div>
+            </div>
+
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-emoji-sunglasses" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Achievement Badges</h5>
+                <p>Unlock badges for milestones like your first post, first follower, 7-day streak, and more. Your badge collection is displayed on your profile as proof of your journey.</p>
+              </div>
+            </div>
+
+            <!-- Leaderboards -->
+            <h4 class="modal-section-title"><i class="bi bi-bar-chart me-2"></i>Weekly Leaderboards</h4>
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-trophy" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Compete & Climb</h5>
+                <p>The leaderboard resets every week, giving everyone a fresh chance to climb. See your weekly rank, compare your XP with others, and earn bragging rights as a top contributor.</p>
+              </div>
+            </div>
+
+            <!-- Challenges -->
+            <h4 class="modal-section-title"><i class="bi bi-flag me-2"></i>Timed Challenges</h4>
+            <div class="how-step">
+              <div class="how-step-number"><i class="bi bi-stopwatch" style="font-size: 1rem;"></i></div>
+              <div class="how-step-content">
+                <h5>Special Goals & Deadlines</h5>
+                <p>Take on challenges with specific goals and deadlines. Join challenges to track your progress, earn bonus XP rewards, and unlock exclusive badges. Challenges range from posting streaks to community engagement goals.</p>
+              </div>
+            </div>
+
+            <!-- XP Actions Summary -->
+            <h4 class="modal-section-title"><i class="bi bi-list-check me-2"></i>How to Earn XP</h4>
+            <div class="feature-tags">
+              <span class="feature-tag">Daily Login</span>
+              <span class="feature-tag">Create a Post</span>
+              <span class="feature-tag">Comment on Posts</span>
+              <span class="feature-tag">Like Posts</span>
+              <span class="feature-tag">Share Posts</span>
+              <span class="feature-tag">Maintain Streaks</span>
+              <span class="feature-tag">Complete Challenges</span>
+              <span class="feature-tag">Get Nominated</span>
+              <span class="feature-tag">Receive Cheers</span>
+              <span class="feature-tag">Build Connections</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-light rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -442,7 +636,7 @@
           <div class="col-lg-2 col-6">
             <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Product</h6>
             <ul style="list-style: none; padding: 0;">
-              <li class="mb-2"><a href="how-it-works.html">How It Works</a></li>
+              <li class="mb-2"><a href="software.html">How It Works</a></li>
               <li class="mb-2"><a href="download.html">Download</a></li>
               <li class="mb-2"><a href="gamification.html">Gamification</a></li>
             </ul>

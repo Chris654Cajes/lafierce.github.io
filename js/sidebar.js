@@ -8,14 +8,17 @@
   const page = window.location.pathname.split('/').pop() || 'index.html';
 
   const navItems = [
-    { href: 'index.html',    label: 'Introduction',         icon: 'bi-house-door' },
-    { href: 'purpose.html',  label: 'Purpose',              icon: 'bi-bullseye'   },
-    { href: 'success.html',  label: 'Success Stories',      icon: 'bi-trophy'     },
-    { href: 'software.html', label: 'Software / Application', icon: 'bi-phone'    },
-    { href: 'transparency.html', label: 'Transparency',     icon: 'bi-shield-check' },
-    { href: 'gamification.html', label: 'Gamification',     icon: 'bi-shield-check' },
-    { href: 'download.html', label: 'Download',             icon: 'bi-download'   },
+    { href: 'index.html', label: 'Introduction', icon: 'bi-house-door' },
+    { href: 'purpose.html', label: 'Purpose', icon: 'bi-bullseye' },
+    { href: 'success.html', label: 'Success Stories', icon: 'bi-trophy' },
+    { href: 'software.html', label: 'Software / Application', icon: 'bi-phone' },
+    { href: 'transparency.html', label: 'Transparency', icon: 'bi-shield-check' },
+    { href: 'gamification.html', label: 'Gamification', icon: 'bi-shield-check' },
+    { href: 'download.html', label: 'Download', icon: 'bi-download' },
+    { href: 'mistakesToSuccess.html', label: 'Mistakes-to-Success', icon: 'bi-lightbulb' }  // Changed icon for inspiration theme
   ];
+
+  // ...existing code...
 
   const navHTML = navItems.map(item => {
     const active = page === item.href ? ' active' : '';
