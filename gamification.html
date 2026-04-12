@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/shared.css" />
   <style>
-    #content { padding: 0; }
+    #content {
+      padding: 0;
+    }
 
     .hero-section {
       min-height: 100vh;
@@ -27,13 +30,22 @@
       right: -20%;
       width: 80%;
       height: 150%;
-      background: radial-gradient(ellipse, rgba(255,55,0,0.15) 0%, transparent 60%);
+      background: radial-gradient(ellipse, rgba(255, 55, 0, 0.15) 0%, transparent 60%);
       animation: breathe 6s ease-in-out infinite;
     }
 
     @keyframes breathe {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 0.8; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
     }
 
     .hero-content {
@@ -46,8 +58,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,55,0,0.1);
-      border: 1px solid rgba(255,55,0,0.3);
+      background: rgba(255, 55, 0, 0.1);
+      border: 1px solid rgba(255, 55, 0, 0.3);
       border-radius: 50px;
       padding: 8px 20px;
       color: var(--fierce-red);
@@ -73,7 +85,7 @@
 
     .hero-subtitle {
       font-size: 1.3rem;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       max-width: 500px;
       margin-bottom: 40px;
       line-height: 1.6;
@@ -95,12 +107,12 @@
       text-decoration: none;
       transition: all 0.3s;
       border: none;
-      box-shadow: 0 10px 30px rgba(255,55,0,0.3);
+      box-shadow: 0 10px 30px rgba(255, 55, 0, 0.3);
     }
 
     .btn-fierce:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255,55,0,0.4);
+      box-shadow: 0 15px 40px rgba(255, 55, 0, 0.4);
       color: white;
     }
 
@@ -112,7 +124,7 @@
       font-weight: 700;
       font-size: 1.05rem;
       text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(255, 255, 255, 0.3);
       transition: all 0.3s;
     }
 
@@ -136,7 +148,7 @@
       background: #111;
       border-radius: 40px;
       border: 8px solid #333;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 100px rgba(255,55,0,0.1);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 100px rgba(255, 55, 0, 0.1);
       overflow: hidden;
       position: relative;
     }
@@ -158,10 +170,6 @@
       left: 50%;
       transform: translateX(-50%);
       width: 120px;
-      height: 30px;
-      background: #111;
-      border-radius: 0 0 20px 20px;
-      z-index: 10;
     }
 
     /* Features Section */
@@ -180,7 +188,7 @@
       width: 64px;
       height: 64px;
       border-radius: 16px;
-      background: rgba(255,55,0,0.1);
+      background: rgba(255, 55, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -237,7 +245,7 @@
     }
 
     .cta-section p {
-      color: rgba(255,255,255,0.85);
+      color: rgba(255, 255, 255, 0.85);
       font-size: 1.2rem;
       max-width: 600px;
       margin: 0 auto 40px;
@@ -253,12 +261,12 @@
       text-decoration: none;
       display: inline-block;
       transition: all 0.3s;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .btn-white:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
       color: var(--fierce-red);
     }
 
@@ -266,11 +274,11 @@
     footer {
       padding: 60px;
       background: #0c0c0c;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
     }
 
     footer a {
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
     }
 
@@ -293,12 +301,32 @@
     }
 
     @media (max-width: 991.98px) {
-      .hero-title { font-size: 2.5rem; }
-      .hero-section { flex-direction: column; text-align: center; }
-      .hero-content { padding: 40px 24px; }
-      .hero-cta { justify-content: center; }
-      .hero-visual { padding: 40px 24px; }
-      .features-section, .stats-section, .cta-section { padding: 60px 24px; }
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content {
+        padding: 40px 24px;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        padding: 40px 24px;
+      }
+
+      .features-section,
+      .stats-section,
+      .cta-section {
+        padding: 60px 24px;
+      }
     }
 
     /* Modal Styles */
@@ -376,6 +404,10 @@
 
     .how-step-content p {
       color: rgba(255, 255, 255, 0.7);
+    }
+
+    .how-step-content p {
+      color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
       margin: 0;
       line-height: 1.5;
@@ -403,273 +435,1117 @@
       font-weight: 600;
       border: 1px solid rgba(255, 55, 0, 0.2);
     }
+
+    /* Gamification Hero Section */
+    .gamification-hero {
+      text-align: center;
+      margin-bottom: 80px;
+      padding: 60px 0;
+      background: linear-gradient(135deg, rgba(255, 55, 0, 0.05) 0%, rgba(255, 140, 0, 0.02) 100%);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gamification-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 55, 0, 0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .gamification-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gamification-hero p {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* XP Cards */
+    .xp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .xp-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--fierce-red), var(--fierce-orange));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .xp-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--fierce-red);
+    }
+
+    .xp-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .xp-card-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .xp-card-icon::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+    }
+
+    .xp-card:hover .xp-card-icon::before {
+      animation: shimmer 0.5s ease;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .xp-card-icon.red { background: linear-gradient(135deg, #ff6b6b, var(--fierce-red)); color: white; }
+    .xp-card-icon.green { background: linear-gradient(135deg, #51cf66, #2ecc71); color: white; }
+    .xp-card-icon.blue { background: linear-gradient(135deg, #339af0, #1c7ed6); color: white; }
+    .xp-card-icon.orange { background: linear-gradient(135deg, var(--fierce-orange), #ff8c00); color: white; }
+
+    .xp-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .xp-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* XP Action Table */
+    .action-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .action-table thead {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+    }
+
+    .action-table th {
+      padding: 20px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+    }
+
+    .action-table tbody tr {
+      transition: all 0.2s ease;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .action-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .action-table tbody tr:hover {
+      background: rgba(255, 55, 0, 0.05);
+      transform: scale(1.02);
+    }
+
+    .action-table td {
+      padding: 20px;
+      border: none;
+      vertical-align: middle;
+    }
+
+    .action-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .xp-badge {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    /* Level Badges */
+    .level-badge {
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 24px;
+      margin: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .level-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 55, 0, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .level-badge:hover {
+      transform: translateY(-4px) scale(1.05);
+      border-color: var(--fierce-red);
+      box-shadow: 0 8px 20px rgba(255, 55, 0, 0.2);
+    }
+
+    .level-badge:hover::before {
+      left: 100%;
+    }
+
+    .level-badge .emoji {
+      font-size: 1.5rem;
+      margin-right: 8px;
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    /* Leaderboard */
+    .leaderboard-row {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid var(--card-border);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .leaderboard-row:last-child {
+      border-bottom: none;
+    }
+
+    .leaderboard-row:hover {
+      background: rgba(255, 55, 0, 0.05);
+      transform: translateX(8px);
+    }
+
+    .leaderboard-row.top-1 {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.05));
+      border-left: 4px solid #ffd700;
+    }
+
+    .leaderboard-row.top-2 {
+      background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(169, 169, 169, 0.05));
+      border-left: 4px solid #c0c0c0;
+    }
+
+    .leaderboard-row.top-3 {
+      background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(184, 115, 51, 0.05));
+      border-left: 4px solid #cd7f32;
+    }
+
+    .rank-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-right: 20px;
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      flex-shrink: 0;
+    }
+
+    .leaderboard-user {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .leaderboard-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-right: 16px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      flex-shrink: 0;
+    }
+
+    .leaderboard-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .leaderboard-level {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .leaderboard-xp {
+      font-weight: 800;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Challenge Cards */
+    .challenge-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .challenge-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--fierce-red), var(--fierce-orange));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .challenge-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--fierce-red);
+    }
+
+    .challenge-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .challenge-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .challenge-emoji {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .challenge-info h5 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .challenge-info p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .challenge-progress {
+      width: 100%;
+      height: 12px;
+      background: var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .challenge-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--fierce-red), var(--fierce-orange));
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .challenge-progress-fill::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: progress-shimmer 2s infinite;
+    }
+
+    @keyframes progress-shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .challenge-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .challenge-xp {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .streak-fire {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Responsive Improvements */
+    @media (max-width: 768px) {
+      .gamification-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .level-badge {
+        margin: 4px;
+        font-size: 0.85rem;
+        padding: 12px 16px;
+      }
+
+      .leaderboard-row {
+        padding: 16px;
+      }
+
+      .rank-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 12px;
+      }
+
+      .leaderboard-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 12px;
+      }
+
+      .action-table {
+        font-size: 0.9rem;
+      }
+
+      .action-table th,
+      .action-table td {
+        padding: 12px;
+      }
+    }
+
+    /* Theme Variables */
+    :root {
+      --bg-primary: #f8f9fa;
+      --bg-secondary: #e9ecef;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #0f0f0f;
+    }
+
+    .theme-muted {
+      color: var(--text-muted);
+    }
   </style>
 </head>
-<body>
-<div class="lf-wrapper">
-  <aside id="sidebar"></aside>
 
-  <div id="content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <div class="hero-badge">
-                <i class="bi bi-fire"></i>
-                Now with Gamification — Earn XP, Level Up, Compete
-              </div>
-              <h1 class="hero-title">
-                Be <span class="gradient">Fierce</span>.<br />Be <span class="gradient">Resilient</span>.
-              </h1>
-              <p class="hero-subtitle">
-                La-Fierce is the social network where your resilience becomes your superpower. Share your story, connect with others, and grow through every challenge.
-              </p>
-              <div class="hero-cta">
-                <a href="download.html" class="btn-fierce">
-                  <i class="bi bi-download me-2"></i>Download Now
-                </a>
-                <button class="btn-outline-fierce" data-bs-toggle="modal" data-bs-target="#howItWorksModal">
-                  <i class="bi bi-play-circle me-2"></i>See How It Works
-                </button>
+<body>
+  <div class="lf-wrapper">
+    <aside id="sidebar"></aside>
+
+    <div id="content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content">
+                <div class="hero-badge">
+                  <i class="bi bi-fire"></i>
+                  Now with Gamification — Earn XP, Level Up, Compete
+                </div>
+                <h1 class="hero-title">
+                  Be <span class="gradient">Fierce</span>.<br />Be <span class="gradient">Resilient</span>.
+                </h1>
+                <p class="hero-subtitle">
+                  La-Fierce is the social network where your resilience becomes your superpower. Share your story,
+                  connect with others, and grow through every challenge.
+                </p>
+                <div class="hero-cta">
+                  <button class="btn-outline-fierce" data-bs-toggle="modal" data-bs-target="#howItWorksModal">
+                    <i class="bi bi-play-circle me-2"></i>See How It Works
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="hero-visual">
-              <div class="phone-mockup">
-                <div class="phone-notch"></div>
-                <div class="phone-screen">
-                  <div style="font-size: 4rem; margin-bottom: 20px;">🦁</div>
-                  <h3 style="color: white; font-weight: 700; margin-bottom: 8px;">La-Fierce</h3>
-                  <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Your resilience story starts here</p>
-                  <div style="margin-top: 40px; text-align: center;">
-                    <div style="color: var(--fierce-red); font-size: 2rem;">✨</div>
-                    <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 12px;">Level 1 · Spark</p>
-                    <p style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">0 XP to next level</p>
+            <div class="col-lg-6">
+              <div class="hero-visual">
+                <div class="phone-mockup">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🦁</div>
+                    <h3 style="color: white; font-weight: 700; margin-bottom: 8px;">La-Fierce</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Your resilience story starts here</p>
+                    <div style="margin-top: 40px; text-align: center;">
+                      <div style="color: var(--fierce-red); font-size: 2rem;">✨</div>
+                      <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 12px;">Level 1 · Spark</p>
+                      <p style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">0 XP to next level</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 16px;">
-              A Community Built on <span class="text-gradient">Resilience</span>
-            </h2>
-            <p class="theme-muted" style="font-size: 1.1rem;">
-              La-Fierce is more than a social network — it's a movement of people who refuse to give up, who lift each other up, and who celebrate every pivot and every comeback.
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <!-- Hero Section -->
+          <div class="gamification-hero">
+            <h1>🎮 Gamification</h1>
+            <p>Turn your resilience into progress. Every action earns XP, every milestone unlocks new levels, and every
+              week brings a fresh chance to climb the leaderboard.</p>
+          </div>
+
+          <!-- XP System -->
+          <div class="section-title">
+            <h2>Earn XP for Everything</h2>
+            <p class="theme-muted">Every positive action you take in the La-Fierce community earns experience points.
+              Stack them up to level up and unlock new status tiers.</p>
+          </div>
+
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+              <div class="xp-card">
+                <div class="xp-card-icon red">
+                  <i class="bi bi-pencil-square"></i>
+                </div>
+                <h4>Create Content</h4>
+                <p>Share your resilience story, comment on posts, or share others' stories to earn XP.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="xp-card">
+                <div class="xp-card-icon green">
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Engage Daily</h4>
+                <p>Like posts, give reactions, and log in daily to build your streak and earn bonus XP.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="xp-card">
+                <div class="xp-card-icon blue">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h4>Connect</h4>
+                <p>Follow users, accept friend requests, and send messages to grow your network.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="xp-card">
+                <div class="xp-card-icon orange">
+                  <i class="bi bi-fire"></i>
+                </div>
+                <h4>Maintain Streaks</h4>
+                <p>Post consistently to build your daily streak and unlock milestone bonuses.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- XP Actions Table -->
+          <div class="section-title">
+            <h2>XP Action Guide</h2>
+            <p class="theme-muted">Here's exactly how much XP you can earn for each action in the app.</p>
+          </div>
+
+          <div class="xp-card">
+            <table class="action-table">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>XP Earned</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>📝 Create a Post</strong></td>
+                  <td><span class="xp-badge">+10 XP</span></td>
+                  <td class="theme-muted">Share your resilience story with the community</td>
+                </tr>
+                <tr>
+                  <td><strong>💬 Write a Comment</strong></td>
+                  <td><span class="xp-badge">+5 XP</span></td>
+                  <td class="theme-muted">Spread kindness with AI-filtered positive comments</td>
+                </tr>
+                <tr>
+                  <td><strong>❤️ Like a Post</strong></td>
+                  <td><span class="xp-badge">+2 XP</span></td>
+                  <td class="theme-muted">Show appreciation for someone's story</td>
+                </tr>
+                <tr>
+                  <td><strong>🔁 Share a Post</strong></td>
+                  <td><span class="xp-badge">+8 XP</span></td>
+                  <td class="theme-muted">Amplify resilience by sharing with your caption</td>
+                </tr>
+                <tr>
+                  <td><strong>🌅 Daily Login</strong></td>
+                  <td><span class="xp-badge">+5 XP</span></td>
+                  <td class="theme-muted">Claim your daily bonus just for showing up</td>
+                </tr>
+                <tr>
+                  <td><strong>🔥 3-Day Streak</strong></td>
+                  <td><span class="xp-badge">+20 XP</span></td>
+                  <td class="theme-muted">Bonus for maintaining a 3-day posting streak</td>
+                </tr>
+                <tr>
+                  <td><strong>🔥🔥 7-Day Streak</strong></td>
+                  <td><span class="xp-badge">+50 XP</span></td>
+                  <td class="theme-muted">Bonus for maintaining a 7-day posting streak</td>
+                </tr>
+                <tr>
+                  <td><strong>🔥🔥🔥 30-Day Streak</strong></td>
+                  <td><span class="xp-badge">+200 XP</span></td>
+                  <td class="theme-muted">Bonus for maintaining a 30-day posting streak</td>
+                </tr>
+                <tr>
+                  <td><strong>💯 100-Day Streak</strong></td>
+                  <td><span class="xp-badge">+1000 XP</span></td>
+                  <td class="theme-muted">Ultimate dedication bonus — you're unstoppable!</td>
+                </tr>
+                <tr>
+                  <td><strong>🤝 New Friend</strong></td>
+                  <td><span class="xp-badge">+15 XP</span></td>
+                  <td class="theme-muted">When a friend request is accepted</td>
+                </tr>
+                <tr>
+                  <td><strong>⭐ Get Nominated</strong></td>
+                  <td><span class="xp-badge">+25 XP</span></td>
+                  <td class="theme-muted">When someone nominates you as a Success Story</td>
+                </tr>
+                <tr>
+                  <td><strong>⚔️ Complete Challenge</strong></td>
+                  <td><span class="xp-badge">+50-200 XP</span></td>
+                  <td class="theme-muted">Varies by challenge difficulty and type</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Level System -->
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Level Up Your Status</h2>
+            <p class="theme-muted">As you accumulate XP, you'll progress through levels, each with its own title and
+              emoji. Show off your status on your profile.</p>
+          </div>
+
+          <div class="xp-card">
+            <div class="d-flex flex-wrap justify-content-center">
+              <div class="level-badge"><span class="emoji">✨</span> Level 1 — Spark</div>
+              <div class="level-badge"><span class="emoji">🌱</span> Level 5 — Sprout</div>
+              <div class="level-badge"><span class="emoji">🌿</span> Level 10 — Growing</div>
+              <div class="level-badge"><span class="emoji">🌳</span> Level 15 — Rooted</div>
+              <div class="level-badge"><span class="emoji">🔥</span> Level 20 — Burning</div>
+              <div class="level-badge"><span class="emoji">⚡</span> Level 25 — Electric</div>
+              <div class="level-badge"><span class="emoji">🌟</span> Level 30 — Shining</div>
+              <div class="level-badge"><span class="emoji">💎</span> Level 40 — Diamond</div>
+              <div class="level-badge"><span class="emoji">👑</span> Level 50 — Legendary</div>
+              <div class="level-badge"><span class="emoji">🔱</span> Level 100 — Immortal</div>
+            </div>
+            <p class="theme-muted text-center mt-4 mb-0" style="font-size: 0.9rem;">
+              <em>Each level requires progressively more XP. The journey from Spark to Immortal is a marathon, not a
+                sprint.</em>
             </p>
           </div>
-          <div class="col-lg-6 offset-lg-1">
-            <div class="feature-item">
-              <div class="feature-icon"><i class="bi bi-heart-pulse"></i></div>
-              <div class="feature-text">
-                <h3>Share Your Story</h3>
-                <p>Post your pivots, failures, and comebacks. Your story might be exactly what someone else needs to hear.</p>
+
+          <!-- Weekly Leaderboards -->
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Weekly Leaderboards</h2>
+            <p class="theme-muted">Compete with the entire La-Fierce community. Leaderboards reset every week, giving
+              everyone a fresh chance to climb to the top.</p>
+          </div>
+
+          <div class="xp-card">
+            <div class="leaderboard-row top-1">
+              <div class="rank-badge">🥇</div>
+              <div class="leaderboard-user">
+                <div class="leaderboard-avatar">🦁</div>
+                <div>
+                  <div class="leaderboard-name">Sarah Mitchell</div>
+                  <div class="leaderboard-level">🌟 Lv.32</div>
+                </div>
+              </div>
+              <div class="leaderboard-xp">2,450 XP</div>
+            </div>
+            <div class="leaderboard-row top-2">
+              <div class="rank-badge">🥈</div>
+              <div class="leaderboard-user">
+                <div class="leaderboard-avatar">🐺</div>
+                <div>
+                  <div class="leaderboard-name">Marcus Johnson</div>
+                  <div class="leaderboard-level">🔥 Lv.28</div>
+                </div>
+              </div>
+              <div class="leaderboard-xp">2,180 XP</div>
+            </div>
+            <div class="leaderboard-row top-3">
+              <div class="rank-badge">🥉</div>
+              <div class="leaderboard-user">
+                <div class="leaderboard-avatar">🦅</div>
+                <div>
+                  <div class="leaderboard-name">Elena Rodriguez</div>
+                  <div class="leaderboard-level">⚡ Lv.26</div>
+                </div>
+              </div>
+              <div class="leaderboard-xp">1,920 XP</div>
+            </div>
+            <div class="leaderboard-row">
+              <div class="rank-badge">#4</div>
+              <div class="leaderboard-user">
+                <div class="leaderboard-avatar">🐻</div>
+                <div>
+                  <div class="leaderboard-name">David Kim</div>
+                  <div class="leaderboard-level">🌟 Lv.31</div>
+                </div>
+              </div>
+              <div class="leaderboard-xp">1,750 XP</div>
+            </div>
+            <div class="leaderboard-row">
+              <div class="rank-badge">#5</div>
+              <div class="leaderboard-user">
+                <div class="leaderboard-avatar">🦊</div>
+                <div>
+                  <div class="leaderboard-name">Aisha Patel</div>
+                  <div class="leaderboard-level">🔥 Lv.24</div>
+                </div>
+              </div>
+              <div class="leaderboard-xp">1,580 XP</div>
+            </div>
+          </div>
+
+          <!-- Timed Challenges -->
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Timed Challenges</h2>
+            <p class="theme-muted">Special limited-time challenges with specific goals. Join challenges to track your
+              progress and earn bonus XP rewards.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="challenge-card">
+                <div class="challenge-header">
+                  <div class="challenge-emoji">📝</div>
+                  <div class="challenge-info">
+                    <h5>7-Day Story Streak</h5>
+                    <p>Post a resilience story every day for 7 days</p>
+                  </div>
+                </div>
+                <div class="challenge-progress">
+                  <div class="challenge-progress-fill" style="width: 71%;"></div>
+                </div>
+                <div class="challenge-meta">
+                  <span class="theme-muted">5/7 days completed</span>
+                  <span class="challenge-xp">+100 XP</span>
+                </div>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-              <div class="feature-text">
-                <h3>AI-Powered Kindness</h3>
-                <p>Our AI filters out negativity. Every comment is scanned to ensure your space stays supportive and toxic-free.</p>
+            <div class="col-lg-6">
+              <div class="challenge-card">
+                <div class="challenge-header">
+                  <div class="challenge-emoji">💬</div>
+                  <div class="challenge-info">
+                    <h5>Kindness Ambassador</h5>
+                    <p>Leave 20 supportive comments this week</p>
+                  </div>
+                </div>
+                <div class="challenge-progress">
+                  <div class="challenge-progress-fill" style="width: 60%;"></div>
+                </div>
+                <div class="challenge-meta">
+                  <span class="theme-muted">12/20 comments</span>
+                  <span class="challenge-xp">+75 XP</span>
+                </div>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon"><i class="bi bi-trophy"></i></div>
-              <div class="feature-text">
-                <h3>Gamified Growth</h3>
-                <p>Earn XP, level up, join challenges, and climb weekly leaderboards. Your resilience is quantified and celebrated.</p>
+            <div class="col-lg-6">
+              <div class="challenge-card">
+                <div class="challenge-header">
+                  <div class="challenge-emoji">🤝</div>
+                  <div class="challenge-info">
+                    <h5>Social Butterfly</h5>
+                    <p>Follow 10 new community members</p>
+                  </div>
+                </div>
+                <div class="challenge-progress">
+                  <div class="challenge-progress-fill" style="width: 100%;"></div>
+                </div>
+                <div class="challenge-meta">
+                  <span class="theme-muted"><strong>✅ Completed!</strong></span>
+                  <span class="challenge-xp">+50 XP</span>
+                </div>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
-              <div class="feature-text">
-                <h3>Real Connections</h3>
-                <p>Follow, friend, message, and nominate. Build a network of people who genuinely care about your journey.</p>
+            <div class="col-lg-6">
+              <div class="challenge-card">
+                <div class="challenge-header">
+                  <div class="challenge-emoji">🔥</div>
+                  <div class="challenge-info">
+                    <h5>30-Day Warrior</h5>
+                    <p>Maintain a 30-day posting streak</p>
+                  </div>
+                </div>
+                <div class="challenge-progress">
+                  <div class="challenge-progress-fill" style="width: 43%;"></div>
+                </div>
+                <div class="challenge-meta">
+                  <span class="theme-muted">13/30 days</span>
+                  <span class="challenge-xp">+200 XP</span>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Badges & Achievements -->
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Badges & Achievements</h2>
+            <p class="theme-muted">Earn unique badges for reaching milestones. Your badge collection is displayed on
+              your profile as a testament to your journey.</p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="xp-card text-center">
+              <div class="streak-fire">🔥</div>
+              <h4>First Post</h4>
+              <p class="theme-muted">Shared your first resilience story</p>
+            </div>
+            <div class="xp-card text-center">
+              <div class="streak-fire">👋</div>
+              <h4>First Follower</h4>
+              <p class="theme-muted">Gained your first follower</p>
+            </div>
+            <div class="xp-card text-center">
+              <div class="streak-fire">💛</div>
+              <h4>Kindness King</h4>
+              <p class="theme-muted">Left 100 supportive comments</p>
+            </div>
+            <div class="xp-card text-center">
+              <div class="streak-fire">🌊</div>
+              <h4>Viral Story</h4>
+              <p class="theme-muted">A post reached 100+ likes</p>
+            </div>
+            <div class="xp-card text-center">
+              <div class="streak-fire">🤝</div>
+              <h4>Network Builder</h4>
+              <p class="theme-muted">Connected with 50 users</p>
+            </div>
+            <div class="xp-card text-center">
+              <div class="streak-fire">⭐</div>
+              <h4>Success Story</h4>
+              <p class="theme-muted">Nominated as a Success Story</p>
+            </div>
+          </div>
+
+          <!-- Level-Up Notifications -->
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Celebrate Every Milestone</h2>
+            <p class="theme-muted">Every time you earn XP or level up, you'll see a satisfying notification that
+              celebrates your progress.</p>
+          </div>
+
+          <div class="xp-card">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h4>Real-Time Feedback</h4>
+                <p class="theme-muted">Watch your XP grow with every action. When you level up, a special celebration
+                  toast appears at the top of your screen, announcing your new level and status.</p>
+                <ul class="theme-muted mt-3" style="list-style: none; padding: 0;">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instant XP notification
+                    after every action</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Animated level-up
+                    celebration</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Progress bar shows distance
+                    to next level</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Weekly XP summary in your
+                    profile</li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="p-5" style="background: rgba(255,55,0,0.05); border-radius: 24px;">
+                  <div style="font-size: 4rem;">🎉</div>
+                  <h4 class="mt-3" style="color: var(--fierce-red);">Level 15 Unlocked!</h4>
+                  <p class="theme-muted mb-0">You are now "Rooted"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <section class="stats-section">
+            <div class="container">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="stat-number">21</div>
+                  <div class="stat-label">Live Features</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stat-number">100+</div>
+                  <div class="stat-label">Level Tiers</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="stat-number">∞</div>
+                  <div class="stat-label">Possibilities</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Modal -->
+          <div class="modal fade" id="howItWorksModal" tabindex="-1" aria-labelledby="howItWorksModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="howItWorksModalLabel">
+                    <i class="bi bi-trophy me-2" style="color: var(--fierce-red);"></i>Gamification System
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="theme-muted mb-4">Your resilience becomes your superpower. Earn XP, level up, and compete
+                    with the community.</p>
+
+                  <!-- XP & Level System -->
+                  <h4 class="modal-section-title"><i class="bi bi-lightning-charge me-2"></i>XP & Level System</h4>
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-star" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Earn XP for Every Action</h5>
+                      <p>Posting, commenting, liking, sharing, and even daily logins earn you XP. Every interaction
+                        counts toward your growth.</p>
+                    </div>
+                  </div>
+
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-arrow-up-circle" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Level Up Through 100+ Tiers</h5>
+                      <p>Accumulate XP to level up and unlock new status levels, from <strong>Spark</strong> to
+                        <strong>Blaze</strong> and beyond. Watch your progress in real-time with celebratory level-up
+                        notifications.</p>
+                    </div>
+                  </div>
+
+                  <!-- Badges & Streaks -->
+                  <h4 class="modal-section-title"><i class="bi bi-award me-2"></i>Badges & Streaks</h4>
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-fire" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Daily Streaks</h5>
+                      <p>Every time you post, your daily streak grows. Maintain your streak to earn bonus XP and show
+                        your commitment to the community.</p>
+                    </div>
+                  </div>
+
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-emoji-sunglasses" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Achievement Badges</h5>
+                      <p>Unlock badges for milestones like your first post, first follower, 7-day streak, and more. Your
+                        badge collection is displayed on your profile as proof of your journey.</p>
+                    </div>
+                  </div>
+
+                  <!-- Leaderboards -->
+                  <h4 class="modal-section-title"><i class="bi bi-bar-chart me-2"></i>Weekly Leaderboards</h4>
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-trophy" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Compete & Climb</h5>
+                      <p>The leaderboard resets every week, giving everyone a fresh chance to climb. See your weekly
+                        rank, compare your XP with others, and earn bragging rights as a top contributor.</p>
+                    </div>
+                  </div>
+
+                  <!-- Challenges -->
+                  <h4 class="modal-section-title"><i class="bi bi-flag me-2"></i>Timed Challenges</h4>
+                  <div class="how-step">
+                    <div class="how-step-number"><i class="bi bi-stopwatch" style="font-size: 1rem;"></i></div>
+                    <div class="how-step-content">
+                      <h5>Special Goals & Deadlines</h5>
+                      <p>Take on challenges with specific goals and deadlines. Join challenges to track your progress,
+                        earn bonus XP rewards, and unlock exclusive badges. Challenges range from posting streaks to
+                        community engagement goals.</p>
+                    </div>
+                  </div>
+
+                  <!-- XP Actions Summary -->
+                  <h4 class="modal-section-title"><i class="bi bi-list-check me-2"></i>How to Earn XP</h4>
+                  <div class="feature-tags">
+                    <span class="feature-tag">Daily Login</span>
+                    <span class="feature-tag">Create a Post</span>
+                    <span class="feature-tag">Comment on Posts</span>
+                    <span class="feature-tag">Like Posts</span>
+                    <span class="feature-tag">Share Posts</span>
+                    <span class="feature-tag">Maintain Streaks</span>
+                    <span class="feature-tag">Complete Challenges</span>
+                    <span class="feature-tag">Get Nominated</span>
+                    <span class="feature-tag">Receive Cheers</span>
+                    <span class="feature-tag">Build Connections</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-light rounded-pill px-4"
+                    data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="stat-number">21</div>
-            <div class="stat-label">Live Features</div>
-          </div>
-          <div class="col-md-4">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">Level Tiers</div>
-          </div>
-          <div class="col-md-4">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">Possibilities</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready to Be Fierce?</h2>
-        <p>Join a community where resilience is rewarded, kindness is enforced, and your story matters.</p>
-        <a href="download.html" class="btn-white">
-          <i class="bi bi-download me-2"></i>Download La-Fierce Now
-        </a>
-      </div>
-    </section>
-
-    <!-- How It Works Modal -->
-    <div class="modal fade" id="howItWorksModal" tabindex="-1" aria-labelledby="howItWorksModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="howItWorksModalLabel">
-              <i class="bi bi-trophy me-2" style="color: var(--fierce-red);"></i>Gamification System
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p class="theme-muted mb-4">Your resilience becomes your superpower. Earn XP, level up, and compete with the community.</p>
-
-            <!-- XP & Level System -->
-            <h4 class="modal-section-title"><i class="bi bi-lightning-charge me-2"></i>XP & Level System</h4>
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-star" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Earn XP for Every Action</h5>
-                <p>Posting, commenting, liking, sharing, and even daily logins earn you XP. Every interaction counts toward your growth.</p>
-              </div>
-            </div>
-
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-arrow-up-circle" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Level Up Through 100+ Tiers</h5>
-                <p>Accumulate XP to level up and unlock new status levels, from <strong>Spark</strong> to <strong>Blaze</strong> and beyond. Watch your progress in real-time with celebratory level-up notifications.</p>
-              </div>
-            </div>
-
-            <!-- Badges & Streaks -->
-            <h4 class="modal-section-title"><i class="bi bi-award me-2"></i>Badges & Streaks</h4>
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-fire" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Daily Streaks</h5>
-                <p>Every time you post, your daily streak grows. Maintain your streak to earn bonus XP and show your commitment to the community.</p>
-              </div>
-            </div>
-
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-emoji-sunglasses" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Achievement Badges</h5>
-                <p>Unlock badges for milestones like your first post, first follower, 7-day streak, and more. Your badge collection is displayed on your profile as proof of your journey.</p>
-              </div>
-            </div>
-
-            <!-- Leaderboards -->
-            <h4 class="modal-section-title"><i class="bi bi-bar-chart me-2"></i>Weekly Leaderboards</h4>
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-trophy" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Compete & Climb</h5>
-                <p>The leaderboard resets every week, giving everyone a fresh chance to climb. See your weekly rank, compare your XP with others, and earn bragging rights as a top contributor.</p>
-              </div>
-            </div>
-
-            <!-- Challenges -->
-            <h4 class="modal-section-title"><i class="bi bi-flag me-2"></i>Timed Challenges</h4>
-            <div class="how-step">
-              <div class="how-step-number"><i class="bi bi-stopwatch" style="font-size: 1rem;"></i></div>
-              <div class="how-step-content">
-                <h5>Special Goals & Deadlines</h5>
-                <p>Take on challenges with specific goals and deadlines. Join challenges to track your progress, earn bonus XP rewards, and unlock exclusive badges. Challenges range from posting streaks to community engagement goals.</p>
-              </div>
-            </div>
-
-            <!-- XP Actions Summary -->
-            <h4 class="modal-section-title"><i class="bi bi-list-check me-2"></i>How to Earn XP</h4>
-            <div class="feature-tags">
-              <span class="feature-tag">Daily Login</span>
-              <span class="feature-tag">Create a Post</span>
-              <span class="feature-tag">Comment on Posts</span>
-              <span class="feature-tag">Like Posts</span>
-              <span class="feature-tag">Share Posts</span>
-              <span class="feature-tag">Maintain Streaks</span>
-              <span class="feature-tag">Complete Challenges</span>
-              <span class="feature-tag">Get Nominated</span>
-              <span class="feature-tag">Receive Cheers</span>
-              <span class="feature-tag">Build Connections</span>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-light rounded-pill px-4" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="footer-brand">La-<span class="gradient">Fierce</span></div>
-            <p style="font-size: 0.9rem;">The social network where resilience becomes your superpower.</p>
-          </div>
-          <div class="col-lg-2 col-6">
-            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Product</h6>
-            <ul style="list-style: none; padding: 0;">
-              <li class="mb-2"><a href="software.html">How It Works</a></li>
-              <li class="mb-2"><a href="download.html">Download</a></li>
-              <li class="mb-2"><a href="gamification.html">Gamification</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-6">
-            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Trust</h6>
-            <ul style="list-style: none; padding: 0;">
-              <li class="mb-2"><a href="transparency.html">Data Transparency</a></li>
-              <li class="mb-2"><a href="#">Privacy Policy</a></li>
-              <li class="mb-2"><a href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4">
-            <h6 style="color: white; font-weight: 600; margin-bottom: 16px;">Stay Connected</h6>
-            <p style="font-size: 0.9rem;">Get updates about new features and community stories.</p>
-            <div class="d-flex gap-3 mt-3">
-              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
-              <a href="#" style="font-size: 1.5rem;"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <hr style="border-color: rgba(255,255,255,0.1); margin: 40px 0;" />
-        <div class="text-center" style="font-size: 0.85rem;">
-          <p class="mb-0">&copy; 2024 La-Fierce. Built with resilience, for the resilient.</p>
-        </div>
-      </div>
-    </footer>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/sidebar.js"></script>
-<script src="js/disableElementStructureLook.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/disableElementStructureLook.js"></script>
 </body>
 </html>
