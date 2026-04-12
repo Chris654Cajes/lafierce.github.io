@@ -29,7 +29,7 @@
 
   const sidebarHTML = `
     <div class="sidebar-header">
-      <img src="images/logo/La-Fierce.png" alt="La-Fierce Logo" />
+      <img src="images/logo/app_icon.png" alt="La-Fierce Logo" />
       <h4>La-Fierce</h4>
       <button class="theme-toggle" id="themeBtn">☀️ Light Mode</button>
     </div>
