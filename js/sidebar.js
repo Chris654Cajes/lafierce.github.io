@@ -13,7 +13,7 @@
     { href: 'success.html', label: 'Success Stories', icon: 'bi-trophy' },
     { href: 'software.html', label: 'Software / Application', icon: 'bi-phone' },
     { href: 'transparency.html', label: 'Transparency', icon: 'bi-shield-check' },
-    { href: 'gamification.html', label: 'Gamification', icon: 'bi-shield-check' },
+    { href: 'gamification.html', label: 'Gamification', icon: 'bi-controller' },
     { href: 'download.html', label: 'Download', icon: 'bi-download' },
     { href: 'mistakesToSuccess.html', label: 'Mistakes-to-Success', icon: 'bi-lightbulb' }  // Changed icon for inspiration theme
   ];
