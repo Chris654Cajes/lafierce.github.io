@@ -1,0 +1,69 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="240" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">La-Fierce (Introduction)</text>
+  
+  <!-- Card 1 - Orange header -->
+  <rect x="300" y="80" width="480" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <rect x="300" y="80" width="480" height="60" fill="#ff3700" rx="20 20 0 0"/>
+  <text x="540" y="115" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="600">Hi everyone! My dear friends</text>
+  
+  <!-- Card content -->
+  <text x="320" y="170" fill="#333333" font-family="Inter" font-size="12">I would like to thank everyone who has supported me</text>
+  <text x="320" y="190" fill="#333333" font-family="Inter" font-size="12">in this project. Your encouragement and feedback</text>
+  <text x="320" y="210" fill="#333333" font-family="Inter" font-size="12">have been invaluable...</text>
+  <text x="320" y="240" fill="#333333" font-family="Inter" font-size="12">You may not know me personally, but I am a</text>
+  <text x="320" y="260" fill="#333333" font-family="Inter" font-size="12">passionate developer with a vision...</text>
+  
+  <!-- Card 2 - Black header -->
+  <rect x="300" y="280" width="480" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <rect x="300" y="280" width="480" height="60" fill="#000000" rx="20 20 0 0"/>
+  <text x="540" y="315" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="600">Situations and Challenges</text>
+  
+  <!-- Card 2 content -->
+  <text x="320" y="370" fill="#333333" font-family="Inter" font-size="12">I have known many people who have faced</text>
+  <text x="320" y="390" fill="#333333" font-family="Inter" font-size="12">various challenges in their lives...</text>
+  <text x="320" y="410" fill="#333333" font-family="Inter" font-size="12">For example, someone may be struggling with</text>
+  <text x="320" y="430" fill="#333333" font-family="Inter" font-size="12">unemployment and finding it hard to make ends meet...</text>
+  
+  <!-- Card 3 - Black header -->
+  <rect x="300" y="480" width="480" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <rect x="300" y="480" width="480" height="60" fill="#000000" rx="20 20 0 0"/>
+  <text x="540" y="515" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="600">Solution for a Better World</text>
+  
+  <!-- Card 3 content -->
+  <text x="320" y="560" fill="#333333" font-family="Inter" font-size="12">I would like to ask everyone to consider how we can</text>
+  <text x="320" y="575" fill="#333333" font-family="Inter" font-size="12">work together to create a better world...</text>
+</svg>

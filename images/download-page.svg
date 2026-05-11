@@ -1,0 +1,87 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="420" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">Download & Installation</text>
+  
+  <!-- Platform cards -->
+  <!-- Windows -->
+  <rect x="300" y="80" width="150" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="375" cy="130" r="35" fill="#0078d4"/>
+  <text x="375" y="135" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="24">🪟</text>
+  <text x="375" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Windows</text>
+  <text x="375" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Desktop</text>
+  <text x="375" y="220" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Application</text>
+  <text x="320" y="245" fill="#198754" font-family="Inter" font-size="10" font-weight="600">✓ Windows 10+</text>
+  
+  <!-- macOS -->
+  <rect x="470" y="80" width="150" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="545" cy="130" r="35" fill="#000000"/>
+  <text x="545" y="135" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="24">🍎</text>
+  <text x="545" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">macOS</text>
+  <text x="545" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Native Mac</text>
+  <text x="545" y="220" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Application</text>
+  <text x="490" y="245" fill="#000000" font-family="Inter" font-size="10" font-weight="600">✓ macOS 10.14+</text>
+  
+  <!-- Android -->
+  <rect x="300" y="280" width="150" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="375" cy="330" r="35" fill="#3ddc84"/>
+  <text x="375" y="335" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="24">🤖</text>
+  <text x="375" y="380" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Android</text>
+  <text x="375" y="400" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Mobile App</text>
+  <text x="375" y="420" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">from Play Store</text>
+  <text x="320" y="445" fill="#3ddc84" font-family="Inter" font-size="10" font-weight="600">✓ Android 8.0+</text>
+  
+  <!-- iOS -->
+  <rect x="470" y="280" width="150" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="545" cy="330" r="35" fill="#000000"/>
+  <text x="545" y="335" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="24">📱</text>
+  <text x="545" y="380" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">iOS</text>
+  <text x="545" y="400" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">iPhone & iPad</text>
+  <text x="545" y="420" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">App</text>
+  <text x="490" y="445" fill="#000000" font-family="Inter" font-size="10" font-weight="600">✓ iOS 13.0+</text>
+  
+  <!-- Web Access -->
+  <rect x="300" y="480" width="320" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="360" cy="520" r="25" fill="#ff3700"/>
+  <text x="360" y="525" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">🌐</text>
+  <text x="410" y="515" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Web Access</text>
+  <text x="410" y="535" fill="#6c757d" font-family="Inter" font-size="12">Browser-based access</text>
+  <text x="320" y="550" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">✓ Any modern browser</text>
+  
+  <!-- Download Button -->
+  <rect x="640" y="480" width="140" height="80" fill="#ff3700" rx="20"/>
+  <text x="710" y="515" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16" font-weight="600">Download</text>
+  <text x="710" y="535" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="12">Now</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="390" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">Gamification</text>
+  
+  <!-- Points System Card -->
+  <rect x="300" y="80" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="375" cy="130" r="35" fill="rgba(255,55,0,0.1)"/>
+  <text x="375" y="135" text-anchor="middle" fill="#ff3700" font-family="Inter" font-size="24">⭐</text>
+  <text x="375" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Points System</text>
+  <text x="375" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Earn points</text>
+  <text x="375" y="220" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">for activities</text>
+  <text x="320" y="250" fill="#ff3700" font-family="Inter" font-size="20" font-weight="700">2,450</text>
+  <text x="375" y="270" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="10">Total Points</text>
+  
+  <!-- Badges Card -->
+  <rect x="470" y="80" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="545" cy="130" r="35" fill="rgba(255,140,0,0.1)"/>
+  <text x="545" y="135" text-anchor="middle" fill="#ff8c00" font-family="Inter" font-size="24">🏅</text>
+  <text x="545" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Badges</text>
+  <text x="545" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Unlock rewards</text>
+  <text x="545" y="220" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">for milestones</text>
+  <g fill="#ff8c00" font-family="Inter" font-size="12">
+    <text x="510" y="250">🏆 Achiever</text>
+    <text x="510" y="265">🎯 Goal Setter</text>
+    <text x="510" y="280">💪 Consistent</text>
+  </g>
+  
+  <!-- Leaderboard Card -->
+  <rect x="300" y="300" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="375" cy="350" r="35" fill="rgba(255,55,0,0.1)"/>
+  <text x="375" y="355" text-anchor="middle" fill="#ff3700" font-family="Inter" font-size="24">🏆</text>
+  <text x="375" y="400" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Leaderboard</text>
+  <text x="375" y="420" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Friendly</text>
+  <text x="375" y="440" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">competition</text>
+  <text x="320" y="470" fill="#333333" font-family="Inter" font-size="10">1. Sarah M. - 3,200 pts</text>
+  <text x="320" y="485" fill="#333333" font-family="Inter" font-size="10">2. John D. - 2,850 pts</text>
+  
+  <!-- Challenges Card -->
+  <rect x="470" y="300" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="545" cy="350" r="35" fill="rgba(255,140,0,0.1)"/>
+  <text x="545" y="355" text-anchor="middle" fill="#ff8c00" font-family="Inter" font-size="24">🎯</text>
+  <text x="545" y="400" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Challenges</text>
+  <text x="545" y="420" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Regular tasks</text>
+  <text x="545" y="440" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">and goals</text>
+  <text x="490" y="470" fill="#ff8c00" font-family="Inter" font-size="10">📅 Weekly Challenge</text>
+  <text x="490" y="485" fill="#ff8c00" font-family="Inter" font-size="10">🎯 Daily Goals</text>
+  
+  <!-- Progress Stats -->
+  <rect x="300" y="520" width="480" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <text x="540" y="545" text-anchor="middle" fill="#333333" font-family="Inter" font-size="14" font-weight="600">Your Progress</text>
+  <g fill="#ff3700" font-family="Inter" font-size="12">
+    <text x="350" y="565" text-anchor="middle">🔥 15 day streak!</text>
+    <text x="450" y="565" text-anchor="middle">📈 Level 8</text>
+    <text x="550" y="565" text-anchor="middle">🏅 12 badges</text>
+  </g>
+</svg>

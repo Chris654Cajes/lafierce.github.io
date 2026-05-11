@@ -1,0 +1,77 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="450" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">Mistakes to Success</text>
+  
+  <!-- Learning Resource 1 -->
+  <rect x="300" y="80" width="480" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="130" r="25" fill="#ff3700"/>
+  <text x="340" y="135" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">📚</text>
+  <text x="380" y="100" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Educational Content</text>
+  <text x="380" y="120" fill="#6c757d" font-family="Inter" font-size="12">Articles and guides</text>
+  <text x="380" y="140" fill="#333333" font-family="Inter" font-size="11">Comprehensive learning materials covering various</text>
+  <text x="380" y="155" fill="#333333" font-family="Inter" font-size="11">topics from personal development to technical skills</text>
+  <text x="380" y="170" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">📖 500+ Articles</text>
+  
+  <!-- Learning Resource 2 -->
+  <rect x="300" y="200" width="480" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="250" r="25" fill="#ff3700"/>
+  <text x="340" y="255" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">📋</text>
+  <text x="380" y="220" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Case Studies</text>
+  <text x="380" y="240" fill="#6c757d" font-family="Inter" font-size="12">Real-world examples</text>
+  <text x="380" y="260" fill="#333333" font-family="Inter" font-size="11">Learn from actual user experiences and</text>
+  <text x="380" y="275" fill="#333333" font-family="Inter" font-size="11">success stories with detailed analysis</text>
+  <text x="380" y="290" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">📊 200+ Case Studies</text>
+  
+  <!-- Learning Resource 3 -->
+  <rect x="300" y="320" width="480" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="370" r="25" fill="#ff3700"/>
+  <text x="340" y="375" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">👨‍🏫</text>
+  <text x="380" y="340" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Expert Advice</text>
+  <text x="380" y="360" fill="#6c757d" font-family="Inter" font-size="12">Professional insights</text>
+  <text x="380" y="380" fill="#333333" font-family="Inter" font-size="11">Get guidance from industry experts and</text>
+  <text x="380" y="395" fill="#333333" font-family="Inter" font-size="11">experienced professionals in various fields</text>
+  <text x="380" y="410" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">🎓 50+ Experts</text>
+  
+  <!-- Learning Resource 4 -->
+  <rect x="300" y="440" width="480" height="100" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="490" r="25" fill="#ff3700"/>
+  <text x="340" y="495" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">👥</text>
+  <text x="380" y="460" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Community Wisdom</text>
+  <text x="380" y="480" fill="#6c757d" font-family="Inter" font-size="12">Shared experiences</text>
+  <text x="380" y="500" fill="#333333" font-family="Inter" font-size="11">Learn from the collective knowledge and</text>
+  <text x="380" y="515" fill="#333333" font-family="Inter" font-size="11">experiences of our diverse community</text>
+  <text x="380" y="530" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">💬 10,000+ Contributions</text>
+</svg>

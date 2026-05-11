@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La-Fierce User Manual</title>
+  <link rel="icon" type="image/png" href="images/logo/app_icon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    /* CSS Variables (Light default) */
+    :root {
+      --bg:            #f8f9fa;
+      --content-bg:    #f8f9fa;
+      --sidebar-bg:    #161616;
+      --sidebar-bord:  #2d2d2d;
+      --text:          #333333;
+      --text-muted:    #6c757d;
+      --card-bg:       #ffffff;
+      --card-border:   #e0e0e0;
+      --acc-btn-bg:    #ffffff;
+      --acc-btn-text:  #333333;
+      --acc-body-bg:   #ffffff;
+      --fierce-red:    #ff3700;
+      --fierce-orange: #ff8c00;
+      --nav-link:      #a0a0a0;
+    }
+
+    [data-theme="dark"] {
+      --bg:           #111111;
+      --content-bg:   #111111;
+      --text:         #f0f0f0;
+      --text-muted:   #888888;
+      --card-bg:      #1e1e1e;
+      --card-border:  #2d2d2d;
+      --acc-btn-bg:   #292929;
+      --acc-btn-text: #ffffff;
+      --acc-body-bg:  #1e1e1e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      transition: background 0.25s, color 0.25s;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .lf-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    #sidebar {
+      width: 280px;
+      min-width: 280px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+      background-color: var(--sidebar-bg);
+      border-right: 1px solid var(--sidebar-bord);
+      z-index: 1000;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-header {
+      padding: 28px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--sidebar-bord);
+    }
+
+    .sidebar-header img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      padding: 5px;
+      background-color: #0f0f0f;
+    }
+
+    .sidebar-header h4 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid rgba(255, 55, 0, 0.4);
+      color: #a0a0a0;
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.2s;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 55, 0, 0.15);
+      color: #fff;
+    }
+
+    .sidebar-nav { padding: 12px 0; }
+
+    .nav-link {
+      color: #a0a0a0;
+      padding: 14px 24px;
+      transition: 0.2s;
+      border-left: 4px solid transparent;
+      font-weight: 400;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-link i { font-size: 1rem; width: 20px; flex-shrink: 0; }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff;
+      background: rgba(255, 55, 0, 0.12);
+      border-left-color: var(--fierce-red);
+    }
+
+    #content {
+      flex: 1;
+      min-height: 100vh;
+      background-color: var(--content-bg);
+      padding: 40px;
+    }
+
+    .manual-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-radius: 24px;
+      padding: 60px;
+      color: white;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manual-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(255, 55, 0, 0.15) 0%, transparent 60%);
+      animation: breathe 6s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .manual-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .manual-hero h1 .gradient {
+      background: linear-gradient(135deg, #ff3700, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .manual-hero p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      line-height: 1.6;
+    }
+
+    .manual-toc {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+
+    .manual-toc h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .toc-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-list li {
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    .toc-list li:hover {
+      background: rgba(255, 55, 0, 0.1);
+      transform: translateX(4px);
+    }
+
+    .toc-list a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toc-list a i {
+      color: var(--fierce-red);
+    }
+
+    .manual-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+
+    .manual-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .manual-section h2 .icon {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+
+    .manual-section .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .manual-screenshot {
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .manual-screenshot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .manual-screenshot-caption {
+      text-align: center;
+      padding: 16px;
+      background: var(--bg);
+      border-radius: 0 0 16px 16px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+
+    .step-card:hover {
+      border-color: var(--fierce-red);
+      transform: translateX(4px);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .step-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      border-color: var(--fierce-red);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(255, 55, 0, 0.1), rgba(255, 140, 0, 0.1));
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .tip-box {
+      background: linear-gradient(135deg, rgba(255, 55, 0, 0.08) 0%, rgba(255, 140, 0, 0.04) 100%);
+      border-left: 4px solid var(--fierce-red);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .tip-box h5 {
+      font-weight: 700;
+      color: var(--fierce-red);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tip-box p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .warning-box {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+      border-left: 4px solid #ffc107;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .warning-box h5 {
+      font-weight: 700;
+      color: #b38600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .warning-box p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .table-custom {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 24px 0;
+    }
+
+    .table-custom thead {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+    }
+
+    .table-custom th {
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .table-custom td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .table-custom tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-custom tbody tr:hover {
+      background: rgba(255, 55, 0, 0.05);
+    }
+
+    .xp-badge {
+      background: linear-gradient(135deg, var(--fierce-red), var(--fierce-orange));
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .level-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .level-badge {
+      background: var(--bg);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .level-badge:hover {
+      border-color: var(--fierce-red);
+      transform: translateY(-2px);
+    }
+
+    .section-nav {
+      position: sticky;
+      top: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-nav h5 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .section-nav a {
+      display: block;
+      padding: 8px 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .section-nav a:hover {
+      background: rgba(255, 55, 0, 0.1);
+      color: var(--fierce-red);
+    }
+
+    footer {
+      background: #0c0c0c;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 40px;
+      text-align: center;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--fierce-red);
+    }
+
+    @media (max-width: 991.98px) {
+      #sidebar {
+        display: none;
+      }
+      
+      .manual-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .manual-section {
+        padding: 24px;
+      }
+      
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <img src="images/logo/app_icon.png" alt="La-Fierce" />
+      <h4>La-Fierce</h4>
+      <button class="theme-toggle" onclick="document.body.setAttribute('data-theme', document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')">
+        <i class="bi bi-moon"></i> Theme
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-link"><i class="bi bi-house"></i> Dashboard</a>
+      <a href="purpose.html" class="nav-link"><i class="bi bi-heart"></i> Purpose</a>
+      <a href="success.html" class="nav-link"><i class="bi bi-trophy"></i> Success Stories</a>
+      <a href="mistakesToSuccess.html" class="nav-link"><i class="bi bi-arrow-up-circle"></i> Mistakes to Success</a>
+      <a href="gamification.html" class="nav-link"><i class="bi bi-controller"></i> Gamification</a>
+      <a href="software.html" class="nav-link"><i class="bi bi-code-slash"></i> Software</a>
+      <a href="transparency.html" class="nav-link"><i class="bi bi-shield-check"></i> Transparency</a>
+      <a href="download.html" class="nav-link"><i class="bi bi-download"></i> Download</a>
+      <a href="user-manual.html" class="nav-link active"><i class="bi bi-book"></i> User Manual</a>
+    </nav>
+  </aside>
+
+  <div id="content">
+    <!-- Hero Section -->
+    <div class="manual-hero">
+      <h1>User <span class="gradient">Manual</span></h1>
+      <p>Welcome to the La-Fierce user manual. This comprehensive guide will help you navigate and make the most of the La-Fierce platform.</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="manual-toc">
+      <h2>Table of Contents</h2>
+      <ul class="toc-list">
+        <li><a href="#getting-started"><i class="bi bi-arrow-right"></i> Getting Started</a></li>
+        <li><a href="#navigation"><i class="bi bi-arrow-right"></i> Navigation Guide</a></li>
+        <li><a href="#features"><i class="bi bi-arrow-right"></i> Main Features</a></li>
+        <li><a href="#posting"><i class="bi bi-arrow-right"></i> Creating Posts</a></li>
+        <li><a href="#engagement"><i class="bi bi-arrow-right"></i> Engagement</a></li>
+        <li><a href="#profiles"><i class="bi bi-arrow-right"></i> Profiles</a></li>
+        <li><a href="#gamification"><i class="bi bi-arrow-right"></i> Gamification System</a></li>
+        <li><a href="#tips"><i class="bi bi-arrow-right"></i> Tips & Tricks</a></li>
+        <li><a href="#faq"><i class="bi bi-arrow-right"></i> FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Getting Started -->
+    <div class="manual-section" id="getting-started">
+      <h2><span class="icon">🚀</span> Getting Started</h2>
+      <p class="subtitle">Everything you need to know to begin your La-Fierce journey.</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4>Download the App</h4>
+        <p>Visit our download page and get the La-Fierce app for iOS or Android. The app is free to download and use.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4>Create Your Account</h4>
+        <p>Sign up with your email or connect through social media. Choose a unique username that represents your resilience journey.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4>Set Up Your Profile</h4>
+        <p>Add a profile picture, write a bio, and share what resilience means to you. This helps others connect with your story.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h4>Start Connecting</h4>
+        <p>Follow other members, explore success stories, and share your own journey. The community is here to support you!</p>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_234759_La-Fierce.jpg" alt="La-Fierce Home Screen" />
+        <div class="manual-screenshot-caption">Home Feed - Connecting with the Community</div>
+      </div>
+    </div>
+
+    <!-- Navigation Guide -->
+    <div class="manual-section" id="navigation">
+      <h2><span class="icon">🧭</span> Navigation Guide</h2>
+      <p class="subtitle">Learn how to navigate the La-Fierce interface.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h4>Home Feed</h4>
+          <p>Your main feed showing posts from people you follow. Tap to refresh and see latest content.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h4>Explore</h4>
+          <p>Discover new content and users. Search for topics, hashtags, or browse categories.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">➕</div>
+          <h4>Create Post</h4>
+          <p>Create a new post. Share your story, photos, or words of encouragement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h4>Notifications</h4>
+          <p>See who liked, commented, or followed you. Stay updated on your activity.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👤</div>
+          <h4>Profile</h4>
+          <p>View your profile, edit settings, and see your stats and achievements.</p>
+        </div>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_235310_La-Fierce.jpg" alt="La-Fierce Profile" />
+        <div class="manual-screenshot-caption">User Profile View</div>
+      </div>
+    </div>
+
+    <!-- Main Features -->
+    <div class="manual-section" id="features">
+      <h2><span class="icon">⚡</span> Main Features</h2>
+      <p class="subtitle">Discover all the powerful features La-Fierce offers.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h4>Resilience Posts</h4>
+          <p>Share your story of overcoming challenges. Inspire others with your journey.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h4>Supportive Comments</h4>
+          <p>AI-filtered comments ensure positivity. Lift others with your words.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h4>Community</h4>
+          <p>Connect with like-minded individuals. Build lasting relationships.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h4>Success Stories</h4>
+          <p>Read inspiring stories from community members who turned setbacks into comebacks.</p>
+        </div>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_235430_La-Fierce.jpg" alt="Success Stories" />
+        <div class="manual-screenshot-caption">Success Stories Section</div>
+      </div>
+    </div>
+
+    <!-- Creating Posts -->
+    <div class="manual-section" id="posting">
+      <h2><span class="icon">✍️</span> Creating Posts</h2>
+      <p class="subtitle">Learn how to share your resilience story with the community.</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4>Tap the Create Button</h4>
+        <p>Look for the + button in the center of the bottom navigation bar.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4>Write Your Content</h4>
+        <p>Share your story, experience, or words of encouragement. You can also add photos or images.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4>Add Tags</h4>
+        <p>Add relevant tags to help others discover your post. Use keywords like #resilience, #growth, #motivation.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h4>Post</h4>
+        <p>Tap Post to share with the community. You'll earn XP for creating content!</p>
+      </div>
+
+      <div class="tip-box">
+        <h5><i class="bi bi-lightbulb"></i> Pro Tip</h5>
+        <p>Be authentic! Your genuine story has the power to inspire others who may be going through similar challenges. Don't be afraid to be vulnerable.</p>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_234641_La-Fierce.jpg" alt="Create Post" />
+        <div class="manual-screenshot-caption">Creating a New Post</div>
+      </div>
+    </div>
+
+    <!-- Engagement -->
+    <div class="manual-section" id="engagement">
+      <h2><span class="icon">❤️</span> Engagement</h2>
+      <p class="subtitle">Interact with the community and show your support.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">❤️</div>
+          <h4>Likes</h4>
+          <p>Tap the heart to show appreciation. Every like earns XP for both you and the creator.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h4>Comments</h4>
+          <p>Leave supportive comments. Our AI ensures a positive environment.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔁</div>
+          <h4>Share</h4>
+          <p>Share posts to your followers. Add your own caption to spread the inspiration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h4>Follow</h4>
+          <p>Follow users whose stories resonate with you. Build your support network.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <h5><i class="bi bi-lightbulb"></i> Pro Tip</h5>
+        <p>Leave thoughtful comments! Generic comments may be filtered. Share specific encouragement that shows you read their story.</p>
+      </div>
+    </div>
+
+    <!-- Profiles -->
+    <div class="manual-section" id="profiles">
+      <h2><span class="icon">👤</span> Profiles</h2>
+      <p class="subtitle">Your profile is your resilience story in summary.</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4>Profile Picture</h4>
+        <p>Add a clear photo of yourself. This helps others recognize you in the community.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4>Bio</h4>
+        <p>Write a short bio about your journey. Share what resilience means to you.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4>Stats</h4>
+        <p>Track your followers, posts, and XP. See your progress over time.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h4>Badges</h4>
+        <p>Earn badges for milestones. Display your achievements proudly!</p>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_235439_La-Fierce.jpg" alt="Profile View" />
+        <div class="manual-screenshot-caption">Viewing Your Profile</div>
+      </div>
+    </div>
+
+    <!-- Gamification System -->
+    <div class="manual-section" id="gamification">
+      <h2><span class="icon">🎮</span> Gamification System</h2>
+      <p class="subtitle">Earn XP, level up, and compete with the community.</p>
+
+      <h3 style="margin-top: 32px; margin-bottom: 16px;">How to Earn XP</h3>
+      <table class="table-custom">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>XP Earned</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Create a Post</strong></td>
+            <td><span class="xp-badge">+10 XP</span></td>
+            <td>Share your resilience story</td>
+          </tr>
+          <tr>
+            <td><strong>Write a Comment</strong></td>
+            <td><span class="xp-badge">+5 XP</span></td>
+            <td>Leave supportive comments</td>
+          </tr>
+          <tr>
+            <td><strong>Like a Post</strong></td>
+            <td><span class="xp-badge">+2 XP</span></td>
+            <td>Show appreciation</td>
+          </tr>
+          <tr>
+            <td><strong>Share a Post</strong></td>
+            <td><span class="xp-badge">+8 XP</span></td>
+            <td>Amplify resilience</td>
+          </tr>
+          <tr>
+            <td><strong>Daily Login</strong></td>
+            <td><span class="xp-badge">+5 XP</span></td>
+            <td>Just for showing up</td>
+          </tr>
+          <tr>
+            <td><strong>3-Day Streak</strong></td>
+            <td><span class="xp-badge">+20 XP</span></td>
+            <td>Bonus for 3-day streak</td>
+          </tr>
+          <tr>
+            <td><strong>7-Day Streak</strong></td>
+            <td><span class="xp-badge">+50 XP</span></td>
+            <td>Bonus for 7-day streak</td>
+          </tr>
+          <tr>
+            <td><strong>New Friend</strong></td>
+            <td><span class="xp-badge">+15 XP</span></td>
+            <td>When friend request is accepted</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top: 32px; margin-bottom: 16px;">Level System</h3>
+      <div class="level-list">
+        <div class="level-badge">✨ Level 1 — Spark</div>
+        <div class="level-badge">🌱 Level 5 — Sprout</div>
+        <div class="level-badge">🌿 Level 10 — Growing</div>
+        <div class="level-badge">🌳 Level 15 — Rooted</div>
+        <div class="level-badge">🔥 Level 20 — Burning</div>
+        <div class="level-badge">⚡ Level 25 — Electric</div>
+        <div class="level-badge">🌟 Level 30 — Shining</div>
+        <div class="level-badge">💎 Level 40 — Diamond</div>
+        <div class="level-badge">👑 Level 50 — Legendary</div>
+        <div class="level-badge">🔱 Level 100 — Immortal</div>
+      </div>
+
+      <div class="tip-box">
+        <h5><i class="bi bi-lightbulb"></i> Pro Tip</h5>
+        <p>Consistency is key! Maintain daily streaks to earn bonus XP. The longer your streak, the bigger the bonus.</p>
+      </div>
+
+      <div class="manual-screenshot">
+        <img src="images/screenshots/Screenshot_20260224_235325_La-Fierce.jpg" alt="Gamification" />
+        <div class="manual-screenshot-caption">Gamification Features</div>
+      </div>
+    </div>
+
+    <!-- Tips & Tricks -->
+    <div class="manual-section" id="tips">
+      <h2><span class="icon">💡</span> Tips & Tricks</h2>
+      <p class="subtitle">Get the most out of your La-Fierce experience.</p>
+
+      <div class="step-card">
+        <div class="step-number">💎</div>
+        <h4>Be Consistent</h4>
+        <p>Post regularly to build your streak. Daily posts earn bonus XP and help others who are following your journey.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">💎</div>
+        <h4>Engage Authentically</h4>
+        <p>Genuine engagement goes further. Leave thoughtful comments that show you've read someone's story.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">💎</div>
+        <h4>Use Hashtags</h4>
+        <p>Add relevant hashtags to help others discover your content. Popular tags: #resilience, #growth, #motivation, #overcome.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">💎</div>
+        <h4>Celebrate Others</h4>
+        <p>Don't just post — engage! Like, comment, and support others. The community grows stronger together.</p>
+      </div>
+
+      <div class="warning-box">
+        <h5><i class="bi bi-exclamation-triangle"></i> Important Note</h5>
+        <p>Our AI filters ensure a positive environment. Generic or negative comments may be removed. Always be supportive and encouraging!</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="manual-section" id="faq">
+      <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+      <p class="subtitle">Common questions about La-Fierce.</p>
+
+      <div class="step-card">
+        <div class="step-number">?</div>
+        <h4>Is La-Fierce free?</h4>
+        <p>Yes! La-Fierce is completely free to download and use. We believe everyone deserves access to a supportive community.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">?</div>
+        <h4>How do I report inappropriate content?</h4>
+        <p>Tap the three dots on any post and select "Report". Our team reviews all reports promptly.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">?</div>
+        <h4>Can I change my username?</h4>
+        <p>Currently, usernames cannot be changed after registration. Choose carefully when you sign up!</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">?</div>
+        <h4>How does the XP system work?</h4>
+        <p>XP is earned through positive engagement. Create posts, comment, like, share, and maintain streaks to level up!</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">?</div>
+        <h4>Is my data safe?</h4>
+        <p>We take privacy seriously. Your data is encrypted and never shared with third parties without your consent.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p><strong>La-Fierce</strong> — Be Fierce. Be Resilient.</p>
+      <p style="margin-top: 12px;">Thank you for being part of our community!</p>
+      <p style="margin-top: 24px;"><a href="download.html"><i class="bi bi-download"></i> Download La-Fierce</a></p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

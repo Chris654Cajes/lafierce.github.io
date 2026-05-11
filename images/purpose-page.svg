@@ -1,0 +1,80 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="270" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">Purpose & Mission</text>
+  
+  <!-- Impact Card 1 -->
+  <rect x="300" y="80" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="24"/>
+  <circle cx="375" cy="130" r="35" fill="rgba(255,55,0,0.1)"/>
+  <text x="375" y="135" text-anchor="middle" fill="#ff3700" font-family="Inter" font-size="24">🤝</text>
+  <text x="375" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Community</text>
+  <text x="375" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Building</text>
+  <text x="315" y="230" fill="#333333" font-family="Inter" font-size="10">Creating supportive</text>
+  <text x="315" y="245" fill="#333333" font-family="Inter" font-size="10">networks and</text>
+  <text x="315" y="260" fill="#333333" font-family="Inter" font-size="10">connections</text>
+  
+  <!-- Impact Card 2 -->
+  <rect x="470" y="80" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="24"/>
+  <circle cx="545" cy="130" r="35" fill="rgba(155,89,182,0.1)"/>
+  <text x="545" y="135" text-anchor="middle" fill="#9b59b6" font-family="Inter" font-size="24">📚</text>
+  <text x="545" y="180" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Resource</text>
+  <text x="545" y="200" text-anchor="middle" fill="#6c757d" font-family="Inter" font-size="12">Sharing</text>
+  <text x="485" y="230" fill="#333333" font-family="Inter" font-size="10">Connecting people</text>
+  <text x="485" y="245" fill="#333333" font-family="Inter" font-size="10">with needed</text>
+  <text x="485" y="260" fill="#333333" font-family="Inter" font-size="10">resources</text>
+  
+  <!-- Impact Card 3 -->
+  <rect x="300" y="300" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="24"/>
+  <circle cx="375" cy="350" r="35" fill="rgba(255,140,0,0.1)"/>
+  <text x="375" y="355" text-anchor="middle" fill="#ff8c00" font-family="Inter" font-size="24">💪</text>
+  <text x="375" y="400" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Empowerment</text>
+  <text x="315" y="430" fill="#333333" font-family="Inter" font-size="10">Tools for personal</text>
+  <text x="315" y="445" fill="#333333" font-family="Inter" font-size="10">and professional</text>
+  <text x="315" y="460" fill="#333333" font-family="Inter" font-size="10">growth</text>
+  
+  <!-- Impact Card 4 -->
+  <rect x="470" y="300" width="150" height="200" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="24"/>
+  <circle cx="545" cy="350" r="35" fill="rgba(255,55,0,0.1)"/>
+  <text x="545" y="355" text-anchor="middle" fill="#ff3700" font-family="Inter" font-size="24">💡</text>
+  <text x="545" y="400" text-anchor="middle" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Innovation</text>
+  <text x="485" y="430" fill="#333333" font-family="Inter" font-size="10">Creative solutions</text>
+  <text x="485" y="445" fill="#333333" font-family="Inter" font-size="10">to complex</text>
+  <text x="485" y="460" fill="#333333" font-family="Inter" font-size="10">problems</text>
+  
+  <!-- Mission Quote Box -->
+  <rect x="300" y="520" width="480" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="300" y="520" width="10" height="60" fill="#ff3700"/>
+  <text x="320" y="545" fill="#333333" font-family="Inter" font-size="12" font-weight="600">"Together, we can create positive change and build a brighter future."</text>
+</svg>

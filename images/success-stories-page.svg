@@ -1,0 +1,81 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="280" height="600" fill="#161616"/>
+  <rect x="0" y="0" width="280" height="600" fill="none" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Logo area -->
+  <rect x="85" y="28" width="110" height="110" fill="#0f0f0f" rx="20"/>
+  <text x="140" y="160" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="18" font-weight="700">La-Fierce</text>
+  
+  <!-- Theme button -->
+  <rect x="90" y="180" width="100" height="30" fill="none" stroke="#ff3700" stroke-width="1" rx="15"/>
+  <text x="140" y="200" text-anchor="middle" fill="#a0a0a0" font-family="Inter" font-size="12">🌙 Dark Mode</text>
+  
+  <!-- Navigation items -->
+  <g fill="#a0a0a0" font-family="Inter" font-size="14">
+    <text x="24" y="250">🏠 Introduction</text>
+    <text x="24" y="280">🎯 Purpose</text>
+    <text x="24" y="310">🏆 Success Stories</text>
+    <text x="24" y="340">📱 Software / Application</text>
+    <text x="24" y="370">🛡️ Transparency</text>
+    <text x="24" y="400">🎮 Gamification</text>
+    <text x="24" y="430">⬇️ Download</text>
+    <text x="24" y="460">💡 Mistakes-to-Success</text>
+  </g>
+  
+  <!-- Active indicator -->
+  <rect x="0" y="300" width="4" height="20" fill="#ff3700"/>
+  
+  <!-- Main content area -->
+  <rect x="280" y="0" width="520" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="540" y="40" text-anchor="middle" fill="#333333" font-family="Inter" font-size="32" font-weight="700">Success Stories</text>
+  
+  <!-- Success Story Card 1 -->
+  <rect x="300" y="80" width="480" height="120" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="140" r="25" fill="#ff3700"/>
+  <text x="340" y="145" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">🏆</text>
+  <text x="380" y="110" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Sarah M. - Career Transformation</text>
+  <text x="380" y="130" fill="#6c757d" font-family="Inter" font-size="12">"From struggling with unemployment to landing my dream job"</text>
+  <text x="380" y="150" fill="#333333" font-family="Inter" font-size="11">La-Fierce's resources helped me build confidence and develop</text>
+  <text x="380" y="165" fill="#333333" font-family="Inter" font-size="11">the skills I needed to succeed in my career.</text>
+  <text x="380" y="185" fill="#ff3700" font-family="Inter" font-size="10" font-weight="600">📈 300% income increase</text>
+  
+  <!-- Success Story Card 2 -->
+  <rect x="300" y="220" width="480" height="120" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="280" r="25" fill="#ff8c00"/>
+  <text x="340" y="285" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">💪</text>
+  <text x="380" y="250" fill="#333333" font-family="Inter" font-size="16" font-weight="600">John D. - Health Journey</text>
+  <text x="380" y="270" fill="#6c757d" font-family="Inter" font-size="12">"Overcame chronic health challenges through community support"</text>
+  <text x="380" y="290" fill="#333333" font-family="Inter" font-size="11">The gamification features kept me motivated to maintain</text>
+  <text x="380" y="305" fill="#333333" font-family="Inter" font-size="11">healthy habits and connect with others facing similar challenges.</text>
+  <text x="380" y="325" fill="#ff8c00" font-family="Inter" font-size="10" font-weight="600">🎯 50 lbs weight loss</text>
+  
+  <!-- Success Story Card 3 -->
+  <rect x="300" y="360" width="480" height="120" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <circle cx="340" cy="420" r="25" fill="#9b59b6"/>
+  <text x="340" y="425" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="16">🎓</text>
+  <text x="380" y="390" fill="#333333" font-family="Inter" font-size="16" font-weight="600">Maria L. - Educational Success</text>
+  <text x="380" y="410" fill="#6c757d" font-family="Inter" font-size="12">"Completed degree while working full-time"</text>
+  <text x="380" y="430" fill="#333333" font-family="Inter" font-size="11">The Mistakes-to-Success section helped me learn from</text>
+  <text x="380" y="445" fill="#333333" font-family="Inter" font-size="11">setbacks and develop effective study strategies.</text>
+  <text x="380" y="465" fill="#9b59b6" font-family="Inter" font-size="10" font-weight="600">📚 4.0 GPA achieved</text>
+  
+  <!-- Achievement Stats -->
+  <rect x="300" y="500" width="480" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="20"/>
+  <text x="540" y="525" text-anchor="middle" fill="#333333" font-family="Inter" font-size="14" font-weight="600">Community Impact</text>
+  <g fill="#ff3700" font-family="Inter" font-size="20" font-weight="700">
+    <text x="350" y="555" text-anchor="middle">10,000+</text>
+    <text x="450" y="555" text-anchor="middle">5,000+</text>
+    <text x="550" y="555" text-anchor="middle">95%</text>
+  </g>
+  <g fill="#6c757d" font-family="Inter" font-size="10">
+    <text x="350" y="570" text-anchor="middle">Lives Changed</text>
+    <text x="450" y="570" text-anchor="middle">Success Stories</text>
+    <text x="550" y="570" text-anchor="middle">Satisfaction</text>
+  </g>
+</svg>
