@@ -70,6 +70,10 @@
     }
     .feature-tile:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(255,55,0,0.08); }
     .feature-tile i { font-size: 1.6rem; color: var(--fierce-red); margin-bottom: 10px; }
+
+    .bg-soft-red    { background-color: rgba(255,55,0,0.1);   color: var(--fierce-red);    }
+    .bg-soft-purple { background-color: rgba(155,89,182,0.1); color: #9b59b6; }
+    .bg-soft-orange { background-color: rgba(255,140,0,0.1);  color: var(--fierce-orange); }
     .feature-tile h6 { font-weight: 700; margin-bottom: 6px; color: var(--text); }
     .feature-tile p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
   </style>
@@ -263,7 +267,26 @@
         </div>
       </div>
 
-      <!-- ── Full Feature Overview ── -->
+            <!-- API Services Architecture -->
+      <div class="row mt-5 mb-4 text-center">
+        <h2 class="fw-bold">API Services Architecture</h2>
+        <p class="theme-muted">All requests are centralized through RetrofitClient with the following service instances:</p>
+      </div>
+
+      <div class="row g-3 mb-5">
+        <div class="col-md-4 col-lg-3"><div class="feature-pill bg-soft-red"><i class="bi bi-person"></i>UsersApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill bg-soft-purple"><i class="bi bi-file-post"></i>PostsApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill bg-soft-orange"><i class="bi bi-envelope"></i>MessagesApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-chat-dots"></i>CommentsApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-bell"></i>NotificationsApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-trophy"></i>GamificationApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-fire"></i>StreaksApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-person-plus"></i>FollowsApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-search"></i>SearchApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-bookmark"></i>BookmarksApi</div></div>
+        <div class="col-md-4 col-lg-3"><div class="feature-pill"><i class="bi bi-flag"></i>ReportsApi</div></div>
+      </div>
+<!-- -- Full Feature Overview -- -->
       <div class="row mt-5 mb-4 text-center">
         <h2 class="fw-bold">Everything That's Live</h2>
         <p class="theme-muted">Every feature currently available in the app.</p>
@@ -302,3 +325,7 @@
 <script src="js/disableElementStructureLook.js"></script>
 </body>
 </html>
+
+
+
+

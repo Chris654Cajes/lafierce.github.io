@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -46,6 +46,54 @@
     }
 
     h2.mb-5 { color: var(--text); }
+
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,55,0,0.08);
+      color: var(--fierce-red);
+      border: 1px solid rgba(255,55,0,0.2);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin: 3px;
+    }
+
+    .bg-soft-red    { background-color: rgba(255,55,0,0.1);   color: var(--fierce-red);    }
+    .bg-soft-purple { background-color: rgba(155,89,182,0.1); color: #9b59b6; }
+    .bg-soft-orange { background-color: rgba(255,140,0,0.1);  color: var(--fierce-orange); }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      border-color: var(--fierce-red);
+    }
+
+    .feature-card h5 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .theme-muted { color: var(--text-muted) !important; }
   </style>
 </head>
 <body>
@@ -54,15 +102,16 @@
 
   <div id="content">
     <div class="container-fluid">
+
       <h2 class="mb-5">La-Fierce (Introduction)</h2>
 
       <div class="custom-card">
         <div class="card-header-orange">
-          <h2 class="card-title-white">Hi everyone! My dear friends</h2>
+          <h2 class="card-title-white">🦁 La Fierce Android</h2>
         </div>
         <div class="card-body-custom">
-          <p>I would like to thank everyone who has supported me in this project. Your encouragement and feedback have been invaluable in shaping La-Fierce into what it is today. I am truly grateful for your belief in this vision and your willingness to join me on this journey. Together, we are creating something special, and I can't wait to see where it takes us next!</p>
-          <p class="mt-4">You may not know me personally, but I am a passionate developer with a vision to create innovative solutions that empower users. La-Fierce is the culmination of my dedication and hard work, and I am excited to share it with all of you. Thank you for being a part of this adventure!</p>
+          <p>A modern Android social media application built with Kotlin, focused on resilience, personal growth, and real human struggles. La-Fierce is a space where difficulties are used as fuel for progress, combining community support with gamified progress tracking.</p>
+          <p class="mt-4"><strong>🦁 Our Mission:</strong> Empowering the Resilient Soul. La-Fierce is a social ecosystem designed around the idea that struggle builds strength. We focus on real stories, real growth, and real progress not perfection.</p>
         </div>
       </div>
 
@@ -81,8 +130,8 @@
           <h2 class="card-title-white">Solution for a World to be a Better Place</h2>
         </div>
         <div class="card-body-custom">
-          <p>I would like to ask everyone to consider how we can work together to create a better world. We all have the power to make a positive impact, whether it's through small acts of kindness, volunteering, or supporting causes that are important to us.</p>
-          <p class="mt-4">No one deserves to face their challenges alone, and by fostering a sense of community and support, we can help each other overcome obstacles and achieve our goals. Let's work together to build a brighter future for ourselves and for generations to come.</p>
+          <p>I would like to ask everyone to consider how we can work together to create a better world. We all have the power to make a positive impact, whether it is through small acts of kindness, volunteering, or supporting causes that are important to us.</p>
+          <p class="mt-4">No one deserves to face their challenges alone, and by fostering a sense of community and support, we can help each other overcome obstacles and achieve our goals. Lets work together to build a brighter future for ourselves and for generations to come.</p>
         </div>
       </div>
     </div>
@@ -94,3 +143,4 @@
 <script src="js/disableElementStructureLook.js"></script>
 </body>
 </html>
+

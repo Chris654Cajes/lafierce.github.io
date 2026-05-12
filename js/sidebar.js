@@ -15,7 +15,8 @@
     { href: 'transparency.html', label: 'Transparency', icon: 'bi-shield-check' },
     { href: 'gamification.html', label: 'Gamification', icon: 'bi-controller' },
     { href: 'download.html', label: 'Download', icon: 'bi-download' },
-    { href: 'mistakesToSuccess.html', label: 'Mistakes-to-Success', icon: 'bi-lightbulb' }  // Changed icon for inspiration theme
+    { href: 'mistakesToSuccess.html', label: 'Mistakes-to-Success', icon: 'bi-lightbulb' },
+    { href: 'positivity.html', label: 'Positivity Reminder', icon: 'bi-sun' }
   ];
 
   // ...existing code...
@@ -101,3 +102,4 @@
     if (e.target.closest('.nav-link') && window.innerWidth <= 768) closeSidebar();
   });
 })();
+
